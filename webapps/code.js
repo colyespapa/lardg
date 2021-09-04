@@ -8,7 +8,7 @@ onEvent("button9", "click", function( ) {
   open("http://lardcompany.ru.eu.org/bank/index.html");
 });
 onEvent("button10", "click", function( ) {
-  open("http://mail.lardcompany.ru.eu.org");
+  open("http://webmail.migadu.com");
 });
 onEvent("button5", "click", function( ) {
   setScreen("screen2");
