@@ -3,7 +3,7 @@ onEvent("LaE", "click", function( ) {
   setScreen("LaE_pantalla");
 });
 onEvent("button2", "click", function( ) {
-  open("http://lardcompany.ru.eu.org/downloads/TraductorRealv1.apk");
+  open("http://lardcorporation.uk.eu.org/downloads/TraductorRealv1.apk");
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
