@@ -1,6 +1,27 @@
 var es_mx = "Choose a word";
 function Welsh() {
   es_mx = getProperty("word_Welsh", "text");
+  if (es_mx == "Pana") {
+    setText("r_welsh", "Banana");
+  }
+  if (es_mx == "Ye tan") {
+    setText("r_welsh", "Dyna fe");
+  }
+  if (es_mx == "Pata") {
+    setText("r_welsh", "Stopia");
+  }
+  if (es_mx == "Uno") {
+    setText("r_welsh", "Un");
+  }
+  if (es_mx == "Tu") {
+    setText("r_welsh", "Dau");
+  }
+  if (es_mx == "Ti") {
+    setText("r_welsh", "Tri");
+  }
+  if (es_mx == "Ta") {
+    setText("r_welsh", "Pedwar");
+  }
   if (es_mx == "Ata, ete, eta") {
     setText("r_welsh", "Hyn");
   }
@@ -118,24 +139,42 @@ function Welsh() {
   if (es_mx == "Ti") {
     setText("r_welsh", "Ydw");
   }
-}
   if (es_mx == "Mi") {
   setText("r_welsh", "Cloddfa");
 }
   if (es_mx == "Osa" ) {
-    setText("r_RU_RU", "Rrhosyn");
+    setText("r_welsh", "Rrhosyn");
   }
   if (es_mx == "Piti" ) {
-    setText("r_RU_RU", "Sbeislydа");
+    setText("r_welsh", "Sbeislydа");
   }
   if (es_mx == "Po" ) {
-    setText("r_RU_RU", "Cyw");
+    setText("r_welsh", "Cyw");
   }
+}
 onEvent("LaE", "click", function( ) {
   setScreen("LaE_pantalla");
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
+  if (es_mx == "Uno") {
+    setText("resultado_espanol", "Uno");
+  }
+  if (es_mx == "Pata") {
+    setText("resultado_espanol", "Basta");
+  }
+  if (es_mx == "Ye tan") {
+    setText("resultado_espanol", "Ya esta");
+  }
+  if (es_mx == "Tu") {
+    setText("resultado_espanol", "Dos");
+  }
+  if (es_mx == "Ti") {
+    setText("resultado_espanol", "Tres");
+  }
+  if (es_mx == "Ta") {
+    setText("resultado_espanol", "Cuatro");
+  }
   if (es_mx == "Mi") {
     setText("resultado_espanol", "Mío");
   }
@@ -271,6 +310,24 @@ onEvent("descargar", "click", function( ) {
 });
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
+  if (es_mx == "Uno") {
+    setText("result_en_us", "1");
+  }
+  if (es_mx == "Pata") {
+    setText("result_en_us", "Stop it");
+  }
+  if (es_mx == "Ye tan") {
+    setText("result_en_us", "That's it");
+  }
+  if (es_mx == "Tu") {
+    setText("result_en_us", "2");
+  }
+  if (es_mx == "Ti") {
+    setText("result_en_us", "3");
+  }
+  if (es_mx == "Ta") {
+    setText("result_en_us", "4");
+  }
   if (es_mx == "Mi") {
     setText("result_en_us", "That's mine!");
   }
@@ -424,6 +481,18 @@ onEvent("LtE", "click", function( ) {
 });
 onEvent("Trans_RU", "click", function( ) {
   es_mx = getProperty("Lard_w_RU", "text");
+  if (es_mx == "Uno") {
+    setText("r_RU_RU", "1");
+  }
+  if (es_mx == "Tu") {
+    setText("r_RU_RU", "2");
+  }
+  if (es_mx == "Ti") {
+    setText("r_RU_RU", "3");
+  }
+  if (es_mx == "Ta") {
+    setText("r_RU_RU", "4");
+  }
   if (es_mx == "Piti") {
     setText("r_RU_RU", "Пряный");
   }
@@ -555,6 +624,12 @@ onEvent("Trans_RU", "click", function( ) {
   }
   if (es_mx == "Mi" ) {
     setText("r_RU_RU", "Шахтаа");
+  }
+  if (es_mx == "Pata" ) {
+    setText("r_RU_RU", "Прекрати");
+  }
+  if (es_mx == "Ye tan" ) {
+    setText("r_RU_RU", "Ну вот");
   }
 });
 onEvent("Home_RU", "click", function( ) {
