@@ -250,7 +250,7 @@ onEvent("translate", "click", function( ) {
   if (es_mx == "Nowene") {
     setText("result_en_us", "____ doesn't come");
   }
-  if (es_mx == "Torta") {
+  if (es_mx == "Tota") {
     setText("result_en_us", "Filled role");
   }
   if (es_mx == "Nay") {
