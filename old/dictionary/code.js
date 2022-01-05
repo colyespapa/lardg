@@ -157,6 +157,9 @@ onEvent("LaE", "click", function( ) {
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
+  if (es_mx == "Pana") {
+    setText("resultado_espanol", "Plátano");
+  }
   if (es_mx == "Uno") {
     setText("resultado_espanol", "Uno");
   }
@@ -310,6 +313,9 @@ onEvent("descargar", "click", function( ) {
 });
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
+  if (es_mx == "Pana") {
+    setText("result_en_us", "Plátano");
+  }
   if (es_mx == "Uno") {
     setText("result_en_us", "1");
   }
@@ -481,6 +487,9 @@ onEvent("LtE", "click", function( ) {
 });
 onEvent("Trans_RU", "click", function( ) {
   es_mx = getProperty("Lard_w_RU", "text");
+  if (es_mx == "Pana") {
+    setText("r_RU_RU", "банан");
+  }
   if (es_mx == "Uno") {
     setText("r_RU_RU", "1");
   }
