@@ -314,7 +314,7 @@ onEvent("descargar", "click", function( ) {
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
   if (es_mx == "Pana") {
-    setText("result_en_us", "Plátano");
+    setText("result_en_us", "Banana");
   }
   if (es_mx == "Uno") {
     setText("result_en_us", "1");
