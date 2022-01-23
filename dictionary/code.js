@@ -1,5 +1,87 @@
 var es_mx = "Choose a word";
+var color = "";
 setScreen("screen1");
+onEvent("button1", "click", function( ) {
+  open("https://www.lardcorporation.uk.eu.org");
+});
+onEvent("change_color_eng", "click", function( ) {
+  color = getText("English_checkbox");
+  if (color == "Green") {
+    setProperty("Color_English_checkbox", "background-color", rgb(26, 188, 15));
+    setProperty("change_color_eng", "background-color", rgb(26, 188, 15));
+    setProperty("dropdown1", "background-color", rgb(26, 188, 15));
+    setProperty("Extras_Lte", "background-color", rgb(26, 188, 15));
+    setProperty("translate", "background-color", rgb(26, 188, 15));
+    setProperty("App_2_English", "background-color", rgb(26, 188, 15));
+    setProperty("Home_English", "background-color", rgb(26, 188, 15));
+  }
+  if (color == "Blue") {
+    setProperty("Color_English_checkbox", "background-color", rgb(13, 25, 232));
+    setProperty("change_color_eng", "background-color", rgb(13, 25, 232));
+    setProperty("dropdown1", "background-color", rgb(13, 25, 232));
+    setProperty("Extras_Lte", "background-color", rgb(13, 25, 232));
+    setProperty("translate", "background-color", rgb(13, 25, 232));
+    setProperty("App_2_English", "background-color", rgb(13, 25, 232));
+    setProperty("Home_English", "background-color", rgb(13, 25, 232));
+  }
+  if (color == "Red") {
+    setProperty("Color_English_checkbox", "background-color", rgb(220, 15, 53));
+    setProperty("change_color_eng", "background-color", rgb(220, 15, 53));
+    setProperty("dropdown1", "background-color", rgb(220, 15, 53));
+    setProperty("Extras_Lte", "background-color", rgb(220, 15, 53));
+    setProperty("translate", "background-color", rgb(220, 15, 53));
+    setProperty("App_2_English", "background-color", rgb(220, 15, 53));
+    setProperty("Home_English", "background-color", rgb(220, 15, 53));
+  }
+  if (color == "Orange") {
+    setProperty("Color_English_checkbox", "background-color", rgb(220, 130, 15));
+    setProperty("change_color_eng", "background-color", rgb(220, 130, 15));
+    setProperty("dropdown1", "background-color", rgb(220, 130, 15));
+    setProperty("Extras_Lte", "background-color", rgb(220, 130, 15));
+    setProperty("translate", "background-color", rgb(220, 130, 15));
+    setProperty("App_2_English", "background-color", rgb(220, 130, 15));
+    setProperty("Home_English", "background-color", rgb(220, 130, 15));
+  }
+});
+onEvent("change_color_esp", "click", function( ) {
+  color = getText("Spanish_checkbox_color");
+  if (color == "Verde") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(26, 188, 15));
+    setProperty("change_color_esp", "background-color", rgb(26, 188, 15));
+    setProperty("Home_Spanish", "background-color", rgb(26, 188, 15));
+    setProperty("App_2_Spanish", "background-color", rgb(26, 188, 15));
+    setProperty("lard_es_mx", "background-color", rgb(26, 188, 15));
+    setProperty("Extras_Lae", "background-color", rgb(26, 188, 15));
+    setProperty("traducir_es_mx", "background-color", rgb(26, 188, 15));
+  }
+  if (color == "Azul") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(13, 25, 232));
+    setProperty("change_color_esp", "background-color", rgb(13, 25, 232));
+    setProperty("Home_Spanish", "background-color", rgb(13, 25, 232));
+    setProperty("App_2_Spanish", "background-color", rgb(13, 25, 232));
+    setProperty("lard_es_mx", "background-color", rgb(13, 25, 232));
+    setProperty("Extras_Lae", "background-color", rgb(13, 25, 232));
+    setProperty("traducir_es_mx", "background-color", rgb(13, 25, 232));
+  }
+  if (color == "Rojo") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(220, 15, 53));
+    setProperty("change_color_esp", "background-color", rgb(220, 15, 53));
+    setProperty("Home_Spanish", "background-color", rgb(220, 15, 53));
+    setProperty("App_2_Spanish", "background-color", rgb(220, 15, 53));
+    setProperty("lard_es_mx", "background-color", rgb(220, 15, 53));
+    setProperty("Extras_Lae", "background-color", rgb(220, 15, 53));
+    setProperty("traducir_es_mx", "background-color", rgb(220, 15, 53));
+  }
+  if (color == "Naranja") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(220, 130, 15));
+    setProperty("change_color_esp", "background-color", rgb(220, 130, 15));
+    setProperty("Home_Spanish", "background-color", rgb(220, 130, 15));
+    setProperty("App_2_Spanish", "background-color", rgb(220, 130, 15));
+    setProperty("lard_es_mx", "background-color", rgb(220, 130, 15));
+    setProperty("Extras_Lae", "background-color", rgb(220, 130, 15));
+    setProperty("traducir_es_mx", "background-color", rgb(220, 130, 15));
+  }
+});
 onEvent("English_checkbox", "input", function( ) {
   setScreen("LtE_screen");
 });
@@ -8,6 +90,12 @@ onEvent("Spanish_checkbox", "input", function( ) {
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
+  if (es_mx == "¿Qué-es-ese?") {
+    setText("resultado_espanol", "¿Qué es ese?");
+  }
+  if (es_mx == "Panton") {
+    setText("resultado_espanol", "Pasaporte");
+  }
   if (es_mx == "Fan") {
     setText("resultado_espanol", "Fan, admirador(es)");
   }
@@ -223,6 +311,12 @@ onEvent("App_2_English", "click", function( ) {
 });
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
+  if (es_mx == "¿Qué-es-ese?") {
+    setText("result_en_us", "What is that?");
+  }
+  if (es_mx == "Panton") {
+    setText("result_en_us", "Passport");
+  }
   if (es_mx == "Me too") {
     setText("result_en_us", "Me too");
   }
@@ -250,7 +344,7 @@ onEvent("translate", "click", function( ) {
   if (es_mx == "Nowene") {
     setText("result_en_us", "____ doesn't come");
   }
-  if (es_mx == "Tota") {
+  if (es_mx == "Torta") {
     setText("result_en_us", "Filled role");
   }
   if (es_mx == "Nay") {
