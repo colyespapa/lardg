@@ -1,13 +1,19 @@
 var es_mx = "Choose a word";
 var color = "";
 setScreen("screen1");
+onEvent("back_eng_ext", "click", function( ) {
+  setScreen("LtE_screen");
+});
+onEvent("back_esp_ext", "click", function( ) {
+  setScreen("LaE_pantalla");
+});
 onEvent("button1", "click", function( ) {
   open("https://www.lardcorporation.uk.eu.org");
 });
 onEvent("change_color_eng", "click", function( ) {
-  color = getText("English_checkbox");
+  color = getText("Color_English");
   if (color == "Green") {
-    setProperty("Color_English_checkbox", "background-color", rgb(26, 188, 15));
+    setProperty("Color_English", "background-color", rgb(26, 188, 15));
     setProperty("change_color_eng", "background-color", rgb(26, 188, 15));
     setProperty("dropdown1", "background-color", rgb(26, 188, 15));
     setProperty("Extras_Lte", "background-color", rgb(26, 188, 15));
@@ -16,7 +22,7 @@ onEvent("change_color_eng", "click", function( ) {
     setProperty("Home_English", "background-color", rgb(26, 188, 15));
   }
   if (color == "Blue") {
-    setProperty("Color_English_checkbox", "background-color", rgb(13, 25, 232));
+    setProperty("Color_English", "background-color", rgb(13, 25, 232));
     setProperty("change_color_eng", "background-color", rgb(13, 25, 232));
     setProperty("dropdown1", "background-color", rgb(13, 25, 232));
     setProperty("Extras_Lte", "background-color", rgb(13, 25, 232));
@@ -25,7 +31,7 @@ onEvent("change_color_eng", "click", function( ) {
     setProperty("Home_English", "background-color", rgb(13, 25, 232));
   }
   if (color == "Red") {
-    setProperty("Color_English_checkbox", "background-color", rgb(220, 15, 53));
+    setProperty("Color_English", "background-color", rgb(220, 15, 53));
     setProperty("change_color_eng", "background-color", rgb(220, 15, 53));
     setProperty("dropdown1", "background-color", rgb(220, 15, 53));
     setProperty("Extras_Lte", "background-color", rgb(220, 15, 53));
@@ -34,7 +40,7 @@ onEvent("change_color_eng", "click", function( ) {
     setProperty("Home_English", "background-color", rgb(220, 15, 53));
   }
   if (color == "Orange") {
-    setProperty("Color_English_checkbox", "background-color", rgb(220, 130, 15));
+    setProperty("Color_English", "background-color", rgb(220, 130, 15));
     setProperty("change_color_eng", "background-color", rgb(220, 130, 15));
     setProperty("dropdown1", "background-color", rgb(220, 130, 15));
     setProperty("Extras_Lte", "background-color", rgb(220, 130, 15));
