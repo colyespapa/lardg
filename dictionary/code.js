@@ -96,6 +96,15 @@ onEvent("Spanish_checkbox", "input", function( ) {
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
+  if (es_mx == "Llene") {
+    setText("resultado_espanol", "Estoy lleno");
+  }
+  if (es_mx == "Yen") {
+    setText("resultado_espanol", "Estoy bien, bien");
+  }
+  if (es_mx == "Esuna") {
+    setText("resultado_espanol", "No funciona");
+  }
   if (es_mx == "¿Qué-es-ese?") {
     setText("resultado_espanol", "¿Qué es ese?");
   }
@@ -166,7 +175,7 @@ onEvent("traducir_es_mx", "click", function( ) {
     setText("resultado_espanol", "Dos");
   }
   if (es_mx == "Ti") {
-    setText("resultado_espanol", "Tres");
+    setText("resultado_espanol", "Tres, Sí");
   }
   if (es_mx == "Ta") {
     setText("resultado_espanol", "Cinco");
@@ -265,7 +274,7 @@ onEvent("traducir_es_mx", "click", function( ) {
     setText("resultado_espanol", "Caja");
   }
   if (es_mx == "Ton") {
-    setText("resultado_espanol", "Ádios, pantalón");
+    setText("resultado_espanol", "Camión, pantalón");
   }
   if (es_mx == "Lalo") {
     setText("resultado_espanol", "Helado");
@@ -294,9 +303,6 @@ onEvent("traducir_es_mx", "click", function( ) {
   if (es_mx == "No") {
     setText("resultado_espanol", "No");
   }
-  if (es_mx == "Ti") {
-    setText("resultado_espanol", "Si");
-  }
   if (es_mx == "Po") {
     setText("resultado_espanol", "Pollo");
   }
@@ -317,6 +323,15 @@ onEvent("App_2_English", "click", function( ) {
 });
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
+  if (es_mx == "Llene") {
+    setText("result_en_us", "I'm full");
+  }
+  if (es_mx == "Yen") {
+    setText("result_en_us", "I'm fine, fine");
+  }
+  if (es_mx == "Esuna") {
+    setText("result_en_us", "It doesn't work");
+  }
   if (es_mx == "¿Qué-es-ese?") {
     setText("result_en_us", "What is that?");
   }
@@ -387,7 +402,7 @@ onEvent("translate", "click", function( ) {
     setText("result_en_us", "2");
   }
   if (es_mx == "Ti") {
-    setText("result_en_us", "3");
+    setText("result_en_us", "3, Yes");
   }
   if (es_mx == "Ta") {
     setText("result_en_us", "5");
@@ -400,9 +415,6 @@ onEvent("translate", "click", function( ) {
   }
   if (es_mx == "No") {
     setText("result_en_us", "No");
-  }
-  if (es_mx == "Ti") {
-    setText("result_en_us", "Yes");
   }
   if (es_mx == "Son") {
     setText("result_en_us", "Bless you! (When someone sneezes)");
@@ -498,7 +510,7 @@ onEvent("translate", "click", function( ) {
     setText("result_en_us", "Box");
   }
   if (es_mx == "Ton") {
-    setText("result_en_us", "Bye, jeans");
+    setText("result_en_us", "Truck, jeans");
   }
   if (es_mx == "Lalo") {
     setText("result_en_us", "Ice cream");
