@@ -5,7 +5,7 @@ onEvent("about_me", "click", function( ) {
   setScreen("AboutMe");
 });
 onEvent("back_aboutme", "click", function( ) {
-  setScreen("screen1");
+  setScreen("mainscree");
 });
 onEvent("schedule", "click", function( ) {
   setScreen("ScheduleScreen");
