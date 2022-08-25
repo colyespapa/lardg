@@ -1,8 +1,8 @@
 onEvent("mapstates", "click", function( ) {
-  open("/mapofstates.pdf");
+  open("maps/mapofstates.pdf");
 });
 onEvent("map_bridge", "click", function( ) {
-  open("/mapofhighways.pdf");
+  open("maps/mapofhighways.pdf");
 });
 onEvent("disclaimer", "click", function( ) {
   setScreen("screen2");
