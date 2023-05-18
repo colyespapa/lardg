@@ -1,8 +1,11 @@
 onEvent("mapstates", "click", function( ) {
-  open("https://lardcorporation.uk.eu.org/maps/mapofstates.pdf");
+  open("/mapofstates.pdf");
 });
 onEvent("map_bridge", "click", function( ) {
-  open("https://lardcorporation.uk.eu.org/maps/mapofhighways.pdf");
+  open("/mapofhighways.pdf");
+});
+onEvent("more", "click", function( ) {
+  open("/StatesInfo.pdf");
 });
 onEvent("disclaimer", "click", function( ) {
   setScreen("screen2");

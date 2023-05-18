@@ -1,6 +1,6 @@
 var es_mx = "Choose a word";
 var color = "";
-setScreen("screen1");
+setScreen("LtE_screen");
 onEvent("back_eng_ext", "click", function( ) {
   setScreen("LtE_screen");
 });

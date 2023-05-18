@@ -342,8 +342,9 @@ button.arrow:focus {
 }
 
 button.arrow:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
+  border: 1px solid #D4D5D7;
+  background-color: #D4D5D7;
+  color: #D4D5D7;
 }
 
 #soft-buttons {
@@ -404,6 +405,10 @@ button.arrow:disabled {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
+}
+
+#codeTextbox.has_banner {
+  top: 60px;
 }
 
 html[dir=rtl] .editor-column {
@@ -480,6 +485,22 @@ html[dir=rtl] .editor-column {
 
 .droplet-gutter-line.droplet_warning {
   background-position: 2px 2px;
+}
+
+html[dir=rtl] #codeTextbox .droplet-wrapper-div {
+  left: 0 !important;
+}
+html[dir=rtl] #codeTextbox .ace_editor {
+  left: 0 !important;
+}
+html[dir=rtl] #codeTextbox .droplet-palette-wrapper {
+  right: 0 !important;
+  left: unset !important;
+  z-index: 1;
+}
+html[dir=rtl] #codeTextbox .droplet-palette-header,
+html[dir=rtl] #codeTextbox .droplet-palette-scroller {
+  border-left: 2px solid #ddd;
 }
 
 #visualizationResizeBar {
@@ -848,8 +869,13 @@ html[dir=RTL] button.blocklyLaunch {
   margin-right: 0;
 }
 button.blocklyLaunch#resetButton {
-  border: 1px solid #0094ca;
-  background-color: #0094ca;
+  border: 1px solid #9660BF;
+  background-color: #9660BF;
+}
+button.blocklyLaunch#resetButton:hover {
+  background-color: #6F488E;
+  border-color: #6F488E;
+  box-shadow: none;
 }
 button.blocklyLaunch.hideText {
   width: 42px;
@@ -1214,6 +1240,10 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
 .workspace-header .ml-modal .fa {
   font-size: 12px;
 }
+.workspace-header.is-running {
+  background-color: #cfc9de;
+  color: #4d575f;
+}
 
 .workspace-header-button {
   cursor: pointer;
@@ -1247,17 +1277,11 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
 
 #design-headers {
   height: 30px;
-  background-color: #7665a0;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.readonly #headers,
-.readonly #design-headers {
-  background-color: #5b6770;
 }
 
 #headers #show-toolbox-icon,
@@ -1298,10 +1322,6 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   padding: 0 10px;
   cursor: pointer;
 }
-#headers #show-toolbox-header #show-toolbox-click-target:hover .fa,
-.purple-header #show-toolbox-header #show-toolbox-click-target:hover .fa {
-  color: #fff;
-}
 #headers #show-toolbox-header > span,
 .purple-header #show-toolbox-header > span {
   margin: auto auto auto 18px;
@@ -1314,7 +1334,8 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
 }
 #headers #clear-puzzle-header:hover,
 .purple-header #clear-puzzle-header:hover {
-  background-color: #c00;
+  background-color: #E5311A;
+  color: #FFFFFF;
 }
 #headers .block-counter-overflow,
 .purple-header .block-counter-overflow {
@@ -1373,6 +1394,9 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   padding-right: 0;
   padding-left: 8px;
 }
+#headers[dir=rtl] .show-toolbox-label {
+  margin-right: 20px;
+}
 
 #showVersionsModal {
   width: 700px;
@@ -1410,15 +1434,15 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
   font-weight: normal;
 }
 
+.blocklyRectangularDropdownMenu {
+  border-color: rgb(84, 84, 84) !important;
+}
 .blocklyRectangularDropdownMenu .goog-menuitem-highlight,
 .blocklyRectangularDropdownMenu .goog-menuitem-hover {
   background-color: rgba(255, 255, 255, 0.35);
 }
-.blocklyRectangularDropdownMenu:not(.blocklyGridDropdownMenu) {
-  border-color: rgb(84, 84, 84) !important;
-}
 .blocklyRectangularDropdownMenu.blocklyGridDropdownMenu {
-  background-color: white !important;
+  background-color: white;
   padding-top: 5px !important;
 }
 .blocklyRectangularDropdownMenu.blocklyGridDropdownMenu .goog-menuitem {
@@ -1432,7 +1456,7 @@ html[dir=RTL] .prompt-icon-cell.authored_hints #lightbulb {
 }
 
 .modal-content .show-code summary {
-  color: #5b6770;
+  color: #292F36;
   font-family: "Gotham 5r", sans-serif;
 }
 .modal-content .show-code .generated-code-container {
@@ -1454,21 +1478,26 @@ html[dir=rtl] .generated-code-container .generatedCodeMessage {
 .generated-code-container .generatedCodeMessage p {
   font-size: 14px;
   line-height: inherit;
-  color: #5b6770;
+  color: #292F36;
   margin-bottom: 10px;
 }
+.generated-code-container .generatedCodeMessage p.caption-text {
+  font-family: "Gotham 5r", sans-serif;
+}
 .generated-code-container .generatedCodeMessage p a {
-  font-family: "Gotham 7r", sans-serif;
+  font-family: "Gotham 4r", sans-serif;
   font-weight: normal;
-  color: #7665a0;
+  color: #9660BF;
+  text-decoration: underline;
 }
 .generated-code-container .generatedCodeMessage p a:hover {
-  text-decoration: underline;
+  color: #6F488E;
 }
 .generated-code-container .generatedCode {
   font-size: 14px;
   overflow: scroll;
   max-height: 400px;
+  margin: 12px 0;
 }
 
 .light-yellow-background {
@@ -1985,6 +2014,12 @@ div.WireframeButtons_active {
   font-size: 14px;
   min-width: 120px;
 }
+.debugger_button:disabled {
+  cursor: not-allowed;
+}
+.debugger_button:disabled:active {
+  border: none !important;
+}
 
 #continueButton {
   border-color: #ffa400;
@@ -2021,12 +2056,6 @@ div.WireframeButtons_active {
 }
 #debug-commands-header .fa {
   margin: 0 0.25em;
-}
-
-#debug-watch-header {
-  width: 201px;
-  float: right;
-  border-left: 1px solid gray;
 }
 
 #watchersResizeBar {
@@ -2169,7 +2198,6 @@ div.WireframeButtons_active {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
 }
 
 #divApplab,
