@@ -1,170 +1,172 @@
 var es_mx = "Choose a word";
-function Welsh() {
-  es_mx = getProperty("word_Welsh", "text");
-  if (es_mx == "Pana") {
-    setText("r_welsh", "Banana");
+var color = "";
+setScreen("LtE_screen");
+onEvent("back_eng_ext", "click", function( ) {
+  setScreen("LtE_screen");
+});
+onEvent("back_esp_ext", "click", function( ) {
+  setScreen("LaE_pantalla");
+});
+onEvent("button1", "click", function( ) {
+  open("https://www.lardcorporation.uk.eu.org");
+});
+onEvent("change_color_eng", "click", function( ) {
+  color = getText("Color_English");
+  if (color == "Green") {
+    setProperty("Color_English", "background-color", rgb(26, 188, 15));
+    setProperty("change_color_eng", "background-color", rgb(26, 188, 15));
+    setProperty("dropdown1", "background-color", rgb(26, 188, 15));
+    setProperty("Extras_Lte", "background-color", rgb(26, 188, 15));
+    setProperty("translate", "background-color", rgb(26, 188, 15));
+    setProperty("App_2_English", "background-color", rgb(26, 188, 15));
+    setProperty("Home_English", "background-color", rgb(26, 188, 15));
   }
-  if (es_mx == "Ye tan") {
-    setText("r_welsh", "Dyna fe");
+  if (color == "Blue") {
+    setProperty("Color_English", "background-color", rgb(13, 25, 232));
+    setProperty("change_color_eng", "background-color", rgb(13, 25, 232));
+    setProperty("dropdown1", "background-color", rgb(13, 25, 232));
+    setProperty("Extras_Lte", "background-color", rgb(13, 25, 232));
+    setProperty("translate", "background-color", rgb(13, 25, 232));
+    setProperty("App_2_English", "background-color", rgb(13, 25, 232));
+    setProperty("Home_English", "background-color", rgb(13, 25, 232));
   }
-  if (es_mx == "Pata") {
-    setText("r_welsh", "Stopia");
+  if (color == "Red") {
+    setProperty("Color_English", "background-color", rgb(220, 15, 53));
+    setProperty("change_color_eng", "background-color", rgb(220, 15, 53));
+    setProperty("dropdown1", "background-color", rgb(220, 15, 53));
+    setProperty("Extras_Lte", "background-color", rgb(220, 15, 53));
+    setProperty("translate", "background-color", rgb(220, 15, 53));
+    setProperty("App_2_English", "background-color", rgb(220, 15, 53));
+    setProperty("Home_English", "background-color", rgb(220, 15, 53));
   }
-  if (es_mx == "Uno") {
-    setText("r_welsh", "Un");
+  if (color == "Orange") {
+    setProperty("Color_English", "background-color", rgb(220, 130, 15));
+    setProperty("change_color_eng", "background-color", rgb(220, 130, 15));
+    setProperty("dropdown1", "background-color", rgb(220, 130, 15));
+    setProperty("Extras_Lte", "background-color", rgb(220, 130, 15));
+    setProperty("translate", "background-color", rgb(220, 130, 15));
+    setProperty("App_2_English", "background-color", rgb(220, 130, 15));
+    setProperty("Home_English", "background-color", rgb(220, 130, 15));
   }
-  if (es_mx == "Tu") {
-    setText("r_welsh", "Dau");
+});
+onEvent("change_color_esp", "click", function( ) {
+  color = getText("Spanish_checkbox_color");
+  if (color == "Verde") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(26, 188, 15));
+    setProperty("change_color_esp", "background-color", rgb(26, 188, 15));
+    setProperty("Home_Spanish", "background-color", rgb(26, 188, 15));
+    setProperty("App_2_Spanish", "background-color", rgb(26, 188, 15));
+    setProperty("lard_es_mx", "background-color", rgb(26, 188, 15));
+    setProperty("Extras_Lae", "background-color", rgb(26, 188, 15));
+    setProperty("traducir_es_mx", "background-color", rgb(26, 188, 15));
   }
-  if (es_mx == "Ti") {
-    setText("r_welsh", "Tri");
+  if (color == "Azul") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(13, 25, 232));
+    setProperty("change_color_esp", "background-color", rgb(13, 25, 232));
+    setProperty("Home_Spanish", "background-color", rgb(13, 25, 232));
+    setProperty("App_2_Spanish", "background-color", rgb(13, 25, 232));
+    setProperty("lard_es_mx", "background-color", rgb(13, 25, 232));
+    setProperty("Extras_Lae", "background-color", rgb(13, 25, 232));
+    setProperty("traducir_es_mx", "background-color", rgb(13, 25, 232));
   }
-  if (es_mx == "Ta") {
-    setText("r_welsh", "Pedwar");
+  if (color == "Rojo") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(220, 15, 53));
+    setProperty("change_color_esp", "background-color", rgb(220, 15, 53));
+    setProperty("Home_Spanish", "background-color", rgb(220, 15, 53));
+    setProperty("App_2_Spanish", "background-color", rgb(220, 15, 53));
+    setProperty("lard_es_mx", "background-color", rgb(220, 15, 53));
+    setProperty("Extras_Lae", "background-color", rgb(220, 15, 53));
+    setProperty("traducir_es_mx", "background-color", rgb(220, 15, 53));
   }
-  if (es_mx == "Ata, ete, eta") {
-    setText("r_welsh", "Hyn");
+  if (color == "Naranja") {
+    setProperty("Spanish_checkbox_color", "background-color", rgb(220, 130, 15));
+    setProperty("change_color_esp", "background-color", rgb(220, 130, 15));
+    setProperty("Home_Spanish", "background-color", rgb(220, 130, 15));
+    setProperty("App_2_Spanish", "background-color", rgb(220, 130, 15));
+    setProperty("lard_es_mx", "background-color", rgb(220, 130, 15));
+    setProperty("Extras_Lae", "background-color", rgb(220, 130, 15));
+    setProperty("traducir_es_mx", "background-color", rgb(220, 130, 15));
   }
-  if (es_mx == "Caca") {
-    setText("r_welsh", "Gwyn");
-  }
-  if (es_mx == "Kiki") {
-    setText("r_welsh", "Melyn, porffor");
-  }
-  if (es_mx == "Me") {
-    setText("r_welsh", "Du");
-  }
-  if (es_mx == "Zuen") {
-    setText("r_welsh", "Glas");
-  }
-  if (es_mx == "Ojo") {
-    setText("r_welsh", "Coch");
-  }
-  if (es_mx == "Aja") {
-    setText("r_welsh", "Oren");
-  }
-  if (es_mx == "Mano") {
-    setText("r_welsh", "Brawd, llaw");
-  }
-  if (es_mx == "Guegue") {
-    setText("r_welsh", "Wy");
-  }
-  if (es_mx == "Guagua") {
-    setText("r_welsh", "Balŵn");
-  }
-  if (es_mx == "Agua") {
-    setText("r_welsh", "Dŵr");
-  }
-  if (es_mx == "Suzo") {
-    setText("r_welsh", "Brwnt");
-  }
-  if (es_mx == "Matana") {
-    setText("r_welsh", "Afal");
-  }
-  if (es_mx == "Coco") {
-    setText("r_welsh", "Cocomelon");
-  }
-  if (es_mx == "Lata") {
-    setText("r_welsh", "Dawns");
-  }
-  if (es_mx == "Pan") {
-    setText("r_welsh", "Bara");
-  }
-  if (es_mx == "Lete") {
-    setText("r_welsh", "Llaeth");
-  }
-  if (es_mx == "Alo") {
-    setText("r_welsh", "Helo");
-  }
-  if (es_mx == "Atang") {
-    setText("r_welsh", "Diolch");
-  }
-  if (es_mx == "Loula") {
-    setText("r_welsh", "Ci");
-  }
-  if (es_mx == "Pato") {
-    setText("r_welsh", "Esgidiau");
-  }
-  if (es_mx == "Tene") {
-    setText("r_welsh", "Esgidiau tennis");
-  }
-  if (es_mx == "Ca") {
-    setText("r_welsh", "Afocado, banana");
-  }
-  if (es_mx == "Mama") {
-    setText("r_welsh", "Mam");
-  }
-  if (es_mx == "Papa") {
-    setText("r_welsh", "Dad");
-  }
-  if (es_mx == "Bebe") {
-    setText("r_welsh", "Babi");
-  }
-  if (es_mx == "Lala") {
-    setText("r_welsh", "Cwcis Lara");
-  }
-  if (es_mx == "Luen") {
-    setText("r_welsh", "Golau");
-  }
-  if (es_mx == "Caja") {
-    setText("r_welsh", "Blwch");
-  }
-  if (es_mx == "Ton") {
-    setText("r_welsh", "Hwyl");
-  }
-  if (es_mx == "Lalo") {
-    setText("r_welsh", "Hufen ia");
-  }
-  if (es_mx == "Bipi") {
-    setText("r_welsh", "Blippi");
-  }
-  if (es_mx == "Booba") {
-    setText("r_welsh", "Booba");
-  }
-  if (es_mx == "Li") {
-    setText("r_welsh", "Gadewch");
-  }
-  if (es_mx == "Leta") {
-    setText("r_welsh", "Siocled");
-  }
-  if (es_mx == "Pe") {
-    setText("r_welsh", "Gwyrdd, troed / traed");
-  }
-  if (es_mx == "Son") {
-    setText("r_welsh", "Welwn ni chi cyn bo hir");
-  }
-  if (es_mx == "No") {
-    setText("r_welsh", "Na");
-  }
-  if (es_mx == "Ti") {
-    setText("r_welsh", "Ydw");
-  }
-  if (es_mx == "Mi") {
-  setText("r_welsh", "Cloddfa");
-}
-  if (es_mx == "Osa" ) {
-    setText("r_welsh", "Rrhosyn");
-  }
-  if (es_mx == "Piti" ) {
-    setText("r_welsh", "Sbeislydа");
-  }
-  if (es_mx == "Po" ) {
-    setText("r_welsh", "Cyw");
-  }
-}
-onEvent("LaE", "click", function( ) {
+});
+onEvent("English_checkbox", "input", function( ) {
+  setScreen("LtE_screen");
+});
+onEvent("Spanish_checkbox", "input", function( ) {
   setScreen("LaE_pantalla");
 });
 onEvent("traducir_es_mx", "click", function( ) {
   es_mx = getProperty("lard_es_mx", "text");
-  if (es_mx == "Pana") {
-    setText("resultado_espanol", "Plátano");
+  if (es_mx == "Llene") {
+    setText("resultado_espanol", "Estoy lleno");
+  }
+  if (es_mx == "Yen") {
+    setText("resultado_espanol", "Estoy bien, bien");
+  }
+  if (es_mx == "Esuna") {
+    setText("resultado_espanol", "No funciona");
+  }
+  if (es_mx == "¿Qué-es-ese?") {
+    setText("resultado_espanol", "¿Qué es ese?");
+  }
+  if (es_mx == "Panton") {
+    setText("resultado_espanol", "Pasaporte");
+  }
+  if (es_mx == "Fan") {
+    setText("resultado_espanol", "Fan, admirador(es)");
+  }
+  if (es_mx == "Me too") {
+    setText("resultado_espanol", "Yo también");
+  }
+  if (es_mx == "E-son") {
+    setText("resultado_espanol", "Ádios");
+  }
+  if (es_mx == "Pen") {
+    setText("resultado_espanol", "Ven");
+  }
+  if (es_mx == "Tuta") {
+    setText("resultado_espanol", "Ducha");
+  }
+  if (es_mx == "As-fanta") {
+    setText("resultado_espanol", "Farmacia");
+  }
+  if (es_mx == "Zin") {
+    setText("resultado_espanol", "Cuatro");
+  }
+  if (es_mx == "Olla") {
+    setText("resultado_espanol", "Olla");
+  }
+  if (es_mx == "E-suzo") {
+    setText("resultado_espanol", "Delicioso");
+  }
+  if (es_mx == "Nowene") {
+    setText("resultado_espanol", "No viene");
+  }
+  if (es_mx == "Tota") {
+    setText("resultado_espanol", "Torta");
+  }
+  if (es_mx == "Nay") {
+    setText("resultado_espanol", "No hay");
+  }
+  if (es_mx == "Wen") {
+    setText("resultado_espanol", "¿Dónde?, ok");
+  }
+  if (es_mx == "On") {
+    setText("resultado_espanol", "Limón");
+  }
+  if (es_mx == "Kene") {
+    setText("resultado_espanol", "Tiene, tener");
+  }
+  if (es_mx == "En") {
+    setText("resultado_espanol", "Comer");
+  }
+  if (es_mx == "Totor") {
+    setText("resultado_espanol", "Doctor, médico");
   }
   if (es_mx == "Uno") {
     setText("resultado_espanol", "Uno");
   }
   if (es_mx == "Pata") {
-    setText("resultado_espanol", "Basta");
+    setText("resultado_espanol", "Basta, pasta de dientes");
   }
   if (es_mx == "Ye tan") {
     setText("resultado_espanol", "Ya esta");
@@ -173,19 +175,19 @@ onEvent("traducir_es_mx", "click", function( ) {
     setText("resultado_espanol", "Dos");
   }
   if (es_mx == "Ti") {
-    setText("resultado_espanol", "Tres");
+    setText("resultado_espanol", "Tres, Sí");
   }
   if (es_mx == "Ta") {
-    setText("resultado_espanol", "Cuatro");
+    setText("resultado_espanol", "Cinco");
   }
   if (es_mx == "Mi") {
     setText("resultado_espanol", "Mío");
   }
-  if (es_mx == "Ata, ete, eta") {
+  if (es_mx == "Ete") {
     setText("resultado_espanol", "Este, esta");
   }
   if (es_mx == "Caca") {
-    setText("resultado_espanol", "Blanco, morado");
+    setText("resultado_espanol", "Blanco, morado, casa");
   }
   if (es_mx == "Kiki") {
     setText("resultado_espanol", "Amarillo");
@@ -220,7 +222,7 @@ onEvent("traducir_es_mx", "click", function( ) {
   if (es_mx == "Suzo") {
     setText("resultado_espanol", "Sucio");
   }
-  if (es_mx == "Matana") {
+  if (es_mx == "Tana") {
     setText("resultado_espanol", "Manzana");
   }
   if (es_mx == "Coco") {
@@ -238,7 +240,7 @@ onEvent("traducir_es_mx", "click", function( ) {
   if (es_mx == "Alo") {
     setText("resultado_espanol", "Hola");
   }
-  if (es_mx == "Atang") {
+  if (es_mx == "Ata") {
     setText("resultado_espanol", "Gracias");
   }
   if (es_mx == "Loula") {
@@ -272,7 +274,7 @@ onEvent("traducir_es_mx", "click", function( ) {
     setText("resultado_espanol", "Caja");
   }
   if (es_mx == "Ton") {
-    setText("resultado_espanol", "Ádios");
+    setText("resultado_espanol", "Camión, pantalón");
   }
   if (es_mx == "Lalo") {
     setText("resultado_espanol", "Helado");
@@ -282,6 +284,9 @@ onEvent("traducir_es_mx", "click", function( ) {
   }
   if (es_mx == "Booba") {
     setText("resultado_espanol", "Booba");
+  }
+  if (es_mx == "Pana") {
+    setText("resultado_espanol", "Plátano");
   }
   if (es_mx == "Li") {
     setText("resultado_espanol", "Vete");
@@ -293,34 +298,102 @@ onEvent("traducir_es_mx", "click", function( ) {
     setText("resultado_espanol", "Verde, pie");
   }
   if (es_mx == "Son") {
-    setText("resultado_espanol", "Ádios");
+    setText("resultado_espanol", "Salud! (Cuando alguien estornuda)");
   }
   if (es_mx == "No") {
     setText("resultado_espanol", "No");
-  }
-  if (es_mx == "Ti") {
-    setText("resultado_espanol", "Si");
   }
   if (es_mx == "Po") {
     setText("resultado_espanol", "Pollo");
   }
 });
-onEvent("LtE", "click", function( ) {
-  setScreen("LtE_screen");
+onEvent("Home_Spanish", "click", function( ) {
+  setScreen("screen1");
+  setChecked("Spanish_checkbox", false);
 });
-onEvent("descargar", "click", function( ) {
+onEvent("App_2_Spanish", "click", function( ) {
+  open("https://www.lardcorporation.uk.eu.org/downloadcenter/LardTranslatorv1.apk");
+});
+onEvent("Home_English", "click", function( ) {
+  setScreen("screen1");
+  setChecked("English_checkbox", false);
+});
+onEvent("App_2_English", "click", function( ) {
   open("https://www.lardcorporation.uk.eu.org/downloadcenter/LardTranslatorv1.apk");
 });
 onEvent("translate", "click", function( ) {
   es_mx = getProperty("dropdown1", "text");
-  if (es_mx == "Pana") {
-    setText("result_en_us", "Banana");
+  if (es_mx == "Llene") {
+    setText("result_en_us", "I'm full");
+  }
+  if (es_mx == "Yen") {
+    setText("result_en_us", "I'm fine, fine");
+  }
+  if (es_mx == "Esuna") {
+    setText("result_en_us", "It doesn't work");
+  }
+  if (es_mx == "¿Qué-es-ese?") {
+    setText("result_en_us", "What is that?");
+  }
+  if (es_mx == "Panton") {
+    setText("result_en_us", "Passport");
+  }
+  if (es_mx == "Me too") {
+    setText("result_en_us", "Me too");
+  }
+  if (es_mx == "E-son") {
+    setText("result_en_us", "Bye");
+  }
+  if (es_mx == "Pen") {
+    setText("result_en_us", "Come");
+  }
+  if (es_mx == "Tuta") {
+    setText("result_en_us", "Shower");
+  }
+  if (es_mx == "As-fanta") {
+    setText("result_en_us", "Drug store");
+  }
+  if (es_mx == "Zin") {
+    setText("result_en_us", "4");
+  }
+  if (es_mx == "Olla") {
+    setText("result_en_us", "Cooking pot");
+  }
+  if (es_mx == "E-suzo") {
+    setText("result_en_us", "Delicious");
+  }
+  if (es_mx == "Nowene") {
+    setText("result_en_us", "____ doesn't come");
+  }
+  if (es_mx == "Torta") {
+    setText("result_en_us", "Filled role");
+  }
+  if (es_mx == "Nay") {
+    setText("result_en_us", "There is not");
+  }
+  if (es_mx == "Wen") {
+    setText("result_en_us", "Where, ok");
+  }
+  if (es_mx == "On") {
+    setText("result_en_us", "Lemon(s)");
+  }
+  if (es_mx == "Kene") {
+    setText("result_en_us", "Have got");
+  }
+  if (es_mx == "En") {
+    setText("result_en_us", "Eat");
+  }
+  if (es_mx == "Totor") {
+    setText("result_en_us", "Doctor");
+  }
+  if (es_mx == "Fan") {
+    setText("result_en_us", "Admirer");
   }
   if (es_mx == "Uno") {
     setText("result_en_us", "1");
   }
   if (es_mx == "Pata") {
-    setText("result_en_us", "Stop it");
+    setText("result_en_us", "Stop it, toothpaste");
   }
   if (es_mx == "Ye tan") {
     setText("result_en_us", "That's it");
@@ -329,10 +402,10 @@ onEvent("translate", "click", function( ) {
     setText("result_en_us", "2");
   }
   if (es_mx == "Ti") {
-    setText("result_en_us", "3");
+    setText("result_en_us", "3, Yes");
   }
   if (es_mx == "Ta") {
-    setText("result_en_us", "4");
+    setText("result_en_us", "5");
   }
   if (es_mx == "Mi") {
     setText("result_en_us", "That's mine!");
@@ -343,20 +416,20 @@ onEvent("translate", "click", function( ) {
   if (es_mx == "No") {
     setText("result_en_us", "No");
   }
-  if (es_mx == "Ti") {
-    setText("result_en_us", "Yes");
-  }
   if (es_mx == "Son") {
-    setText("result_en_us", "Bye");
+    setText("result_en_us", "Bless you! (When someone sneezes)");
   }
-  if (es_mx == "Ata, ete, eta") {
+  if (es_mx == "Ete") {
     setText("result_en_us", "This, that");
   }
   if (es_mx == "Caca") {
-    setText("result_en_us", "White, purple");
+    setText("result_en_us", "White, purple, house");
   }
   if (es_mx == "Kiki") {
     setText("result_en_us", "Yellow");
+  }
+  if (es_mx == "Pana") {
+    setText("result_en_us", "Banana");
   }
   if (es_mx == "Me") {
     setText("result_en_us", "Black");
@@ -385,7 +458,7 @@ onEvent("translate", "click", function( ) {
   if (es_mx == "Suzo") {
     setText("result_en_us", "Dirty");
   }
-  if (es_mx == "Matana") {
+  if (es_mx == "Tana") {
     setText("result_en_us", "Apple");
   }
   if (es_mx == "Coco") {
@@ -403,7 +476,7 @@ onEvent("translate", "click", function( ) {
   if (es_mx == "Alo") {
     setText("result_en_us", "Hi");
   }
-  if (es_mx == "Atang") {
+  if (es_mx == "Ata") {
     setText("result_en_us", "Thanks");
   }
   if (es_mx == "Loula") {
@@ -437,7 +510,7 @@ onEvent("translate", "click", function( ) {
     setText("result_en_us", "Box");
   }
   if (es_mx == "Ton") {
-    setText("result_en_us", "Bye");
+    setText("result_en_us", "Truck, jeans");
   }
   if (es_mx == "Lalo") {
     setText("result_en_us", "Ice cream");
@@ -464,192 +537,10 @@ onEvent("translate", "click", function( ) {
     setText("result_en_us", "Chicken");
   }
 });
-onEvent("Inicio_Lae", "click", function( ) {
-  setScreen("Inicio");
+onEvent("Extras_Lae", "click", function( ) {
+  setScreen("ExtrasSpanish");
 });
-onEvent("startlte", "click", function( ) {
-  setScreen("Inicio");
+onEvent("Extras_Lte", "click", function( ) {
+  setScreen("ExtrasEnglish");
 });
-onEvent("button1", "click", function( ) {
-  setScreen("novedades");
-});
-onEvent("start_wn", "click", function( ) {
-  setScreen("Inicio");
-});
-onEvent("button3", "click", function( ) {
-  setScreen("Inicio");
-});
-onEvent("LtR", "click", function( ) {
-  setScreen("LtR_screen");
-});
-onEvent("LtE", "click", function( ) {
-  setScreen("LtE_screen");
-});
-onEvent("Trans_RU", "click", function( ) {
-  es_mx = getProperty("Lard_w_RU", "text");
-  if (es_mx == "Pana") {
-    setText("r_RU_RU", "банан");
-  }
-  if (es_mx == "Uno") {
-    setText("r_RU_RU", "1");
-  }
-  if (es_mx == "Tu") {
-    setText("r_RU_RU", "2");
-  }
-  if (es_mx == "Ti") {
-    setText("r_RU_RU", "3");
-  }
-  if (es_mx == "Ta") {
-    setText("r_RU_RU", "4");
-  }
-  if (es_mx == "Piti") {
-    setText("r_RU_RU", "Пряный");
-  }
-  if (es_mx == "Pe") {
-    setText("r_RU_RU", "Зеленый, фут / фут");
-  }
-  if (es_mx == "No") {
-    setText("r_RU_RU", "Нет");
-  }
-  if (es_mx == "Ti") {
-    setText("r_RU_RU", "да");
-  }
-  if (es_mx == "Son") {
-    setText("r_RU_RU", "до свидания");
-  }
-  if (es_mx == "Ata, ete, eta") {
-    setText("r_RU_RU", "Это");
-  }
-  if (es_mx == "Caca") {
-    setText("r_RU_RU", "белый");
-  }
-  if (es_mx == "Kiki") {
-    setText("r_RU_RU", "Желтый, фиолетовый");
-  }
-  if (es_mx == "Me") {
-    setText("r_RU_RU", "Чернить");
-  }
-  if (es_mx == "Zuen") {
-    setText("r_RU_RU", "Синий");
-  }
-  if (es_mx == "Ojo") {
-    setText("r_RU_RU", "красный");
-  }
-  if (es_mx == "Aja") {
-    setText("r_RU_RU", "апельсин");
-  }
-  if (es_mx == "Mano") {
-    setText("r_RU_RU", "Брат, рука");
-  }
-  if (es_mx == "Guegue") {
-    setText("r_RU_RU", "Яйцо");
-  }
-  if (es_mx == "Guagua") {
-    setText("r_RU_RU", "Воздушный шар");
-  }
-  if (es_mx == "Agua") {
-    setText("r_RU_RU", "Воды");
-  }
-  if (es_mx == "Suzo") {
-    setText("r_RU_RU", "Грязный");
-  }
-  if (es_mx == "Matana") {
-    setText("r_RU_RU", "яблоко");
-  }
-  if (es_mx == "Coco") {
-    setText("r_RU_RU", "Мультфильм");
-  }
-  if (es_mx == "Lata") {
-    setText("r_RU_RU", "Мяч");
-  }
-  if (es_mx == "Pan") {
-    setText("r_RU_RU", "Хлеб");
-  }
-  if (es_mx == "Lete") {
-    setText("r_RU_RU", "Молоко");
-  }
-  if (es_mx == "Alo") {
-    setText("r_RU_RU", "Привет");
-  }
-  if (es_mx == "Atang") {
-    setText("r_RU_RU", "Спасибо");
-  }
-  if (es_mx == "Loula") {
-    setText("r_RU_RU", "Собака");
-  }
-  if (es_mx == "Pato") {
-    setText("r_RU_RU", "туфли");
-  }
-  if (es_mx == "Tene") {
-    setText("r_RU_RU", "обувь для тенниса");
-  }
-  if (es_mx == "Ca") {
-    setText("r_RU_RU", "авокадо, банан");
-  }
-  if (es_mx == "Mama") {
-    setText("r_RU_RU", "Мама");
-  }
-  if (es_mx == "Papa") {
-    setText("r_RU_RU", "Папа, картошка");
-  }
-  if (es_mx == "Bebe") {
-    setText("r_RU_RU", "Малыш");
-  }
-  if (es_mx == "Lala") {
-    setText("r_RU_RU", "Лара печенье");
-  }
-  if (es_mx == "Luen") {
-    setText("r_RU_RU", "Свет");
-  }
-  if (es_mx == "Caja") {
-    setText("r_RU_RU", "Коробка");
-  }
-  if (es_mx == "Ton") {
-    setText("r_RU_RU", "Пока!");
-  }
-  if (es_mx == "Lalo") {
-    setText("r_RU_RU", "Мороженое");
-  }
-  if (es_mx == "Bipi") {
-    setText("r_RU_RU", "Blippi");
-  }
-  if (es_mx == "Booba") {
-    setText("r_RU_RU", "Буба");
-  }
-  if (es_mx == "Li") {
-    setText("r_RU_RU", "Покинуть");
-  }
-  if (es_mx == "Leta") {
-    setText("r_RU_RU", "Шоколад");
-  }
-  if (es_mx == "Osa" ) {
-    setText("r_RU_RU", "роза");
-  }
-  if (es_mx == "Piti" ) {
-    setText("r_RU_RU", "пряныйа");
-  }
-  if (es_mx == "Po" ) {
-    setText("r_RU_RU", "курицаа");
-  }
-  if (es_mx == "Mi" ) {
-    setText("r_RU_RU", "Шахтаа");
-  }
-  if (es_mx == "Pata" ) {
-    setText("r_RU_RU", "Прекрати");
-  }
-  if (es_mx == "Ye tan" ) {
-    setText("r_RU_RU", "Ну вот");
-  }
-});
-onEvent("Home_RU", "click", function( ) {
-  setScreen("Inicio");
-});
-onEvent("LtW", "click", function( ) {
-  setScreen("LtW_screen");
-});
-onEvent("t_welsh", "click", function( ) {
-  Welsh();
-});
-onEvent("home_welsh", "click", function( ) {
-  setScreen("Inicio");
-});
+

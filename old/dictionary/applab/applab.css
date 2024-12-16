@@ -41,9 +41,9 @@ h2 {
   font-weight: normal; }
 
 a {
-  color: #0596CE; }
+  color: #0596ce; }
   a:hover {
-    color: #0596CE;
+    color: #0596ce;
     background: none; }
 
 strong {
@@ -172,8 +172,8 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin-left: 9px;
-  margin-right: 0px;
+  margin: 5px 0px;
+  margin-inline-end: 9px;
   display: none; }
 
 button.arrow > img {
@@ -190,32 +190,33 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -9px;
   -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-compact {
     margin: 0; }
     #soft-buttons.soft-buttons-compact button {
-      margin: 0 4px 0 0; }
+      margin: 0;
+      margin-inline-end: 4px; }
+  #soft-buttons :last-child {
+    margin-inline-end: 0px; }
+  @supports not (gap: 0 9px) {
+    #soft-buttons {
+      padding-inline-end: 9px; } }
 
 .soft-buttons-1 {
   display: table-cell;
-  vertical-align: top;
-  min-width: 51px; }
+  vertical-align: top; }
 
 .soft-buttons-2 {
   display: table-cell;
-  vertical-align: top;
-  min-width: 102px; }
+  vertical-align: top; }
 
 .soft-buttons-3 {
   display: table-cell;
-  vertical-align: top;
-  min-width: 153px; }
+  vertical-align: top; }
 
 .soft-buttons-4 {
   display: table-cell;
-  vertical-align: top;
-  min-width: 204px; }
+  vertical-align: top; }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
  * other droplet elements, but behind anything with z-index > 1 outside of #codeTextbox,
@@ -323,8 +324,8 @@ html[dir='rtl'] div#visualizationResizeBar {
     text-anchor: start; }
 
 .karel-counter-text.paint {
-  font-size: 13px;
-  stroke-width: 0.8; }
+  font-size: 33px;
+  stroke-width: 2; }
 
 /* Shrink the visualization area on small displays. */
 #visualization.responsive > * {
@@ -475,7 +476,7 @@ html[dir='rtl'] div#visualizationResizeBar {
     font-size: 32px;
     stroke-width: 2px; }
   #soft-buttons {
-    margin: 5px -8px 0 0; }
+    margin: 5px 0 0 0; }
     #soft-buttons button {
       margin: 0 4px 0 0; }
   .small-footer-base.responsive small {
@@ -620,7 +621,11 @@ input[type="radio"] {
   width: 100%;
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines; }
+  text-justify: distribute-all-lines;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 9px; }
 
 #gameButtons:after {
   content: '';
@@ -998,7 +1003,7 @@ html[dir="RTL"] .prompt-icon-cell {
     margin: 0; }
   #showVersionsModal td {
     vertical-align: middle; }
-  #showVersionsModal tr:nth-child(even) {
+  #showVersionsModal tr.highlight {
     background-color: #ebe8f1; }
   #showVersionsModal .template-level-warning {
     font-family: 'Gotham 7r', sans-serif;
@@ -1203,11 +1208,19 @@ html[dir="RTL"] .prompt-icon-cell {
     margin-bottom: 0px; }
   #sharing button.saved-to-gallery {
     font-family: "Gotham 4i"; }
+  #sharing #sharing-input-container {
+    overflow: hidden; }
   #sharing #sharing-input {
     margin: 0;
-    width: 100%;
+    width: calc(100% - 70px);
     padding: 10px;
     cursor: text; }
+  #sharing #sharing-input-copy-button {
+    margin-top: 1px;
+    width: 40px;
+    box-sizing: border-box; }
+  #sharing .sharing-input-copy-button-shared {
+    background-color: #a69bc1; }
   #sharing #copy-button {
     max-width: 100px; }
   #sharing #sharing-phone i.fa {
@@ -2139,7 +2152,7 @@ div#visualizationResizeBar {
   cursor: pointer; }
 
 .chooseAssetDropdownOption {
-  color: #0596CE;
+  color: #0596ce;
   text-decoration: underline; }
 
 *[contenteditable] {
