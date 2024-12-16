@@ -1,11 +1,11 @@
 onEvent("mapstates", "click", function( ) {
-  open("/mapofstates.pdf");
+  open("/old/mapofstates.pdf");
 });
 onEvent("map_bridge", "click", function( ) {
-  open("/mapofhighways.pdf");
+  open("/old/mapofhighways.pdf");
 });
 onEvent("more", "click", function( ) {
-  open("/StatesInfo.pdf");
+  open("/old/StatesInfo.pdf");
 });
 onEvent("disclaimer", "click", function( ) {
   setScreen("screen2");
