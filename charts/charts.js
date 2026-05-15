@@ -230,111 +230,117 @@
 }
 
   function detailArtist(name) {
+    const D = window.LC;
     const hist = [];
     
-    // 1. Recopilar historial
-    D.MO_KEYS.forEach(k => {
+    // 1. Recopilar historial con índice temporal
+    D.MO_KEYS.forEach((k, idx) => {
       const e = (D.MO_ARTISTS[k] || []).find(a => a.name === name);
-      if (e) hist.push({ period: k, rank: e.rank, change: e.change || '', peak: e.peak });
+      if (e) {
+          hist.push({ 
+              period: k, 
+              rank: e.rank, 
+              change: e.change || '', 
+              wkIdx: idx 
+          });
+      }
     });
 
-    // Si por alguna razón no hay historial (seguridad), no seguimos
     if (hist.length === 0) return;
 
-    const peak = hist.length ? Math.min(...hist.map(h => h.rank)) : null;
+    const peak = Math.min(...hist.map(h => h.rank));
     const lastGlobalMonth = D.MO_KEYS[D.MO_KEYS.length - 1];
 
-    // Llenar textos básicos
     document.getElementById('det-title').textContent = name;
-    document.getElementById('det-sub').textContent = 'Artist';
-    document.getElementById('det-peak').innerHTML = peak ? `<div class="peak-badge">Peak Position: #${peak}</div>` : '';
-    document.getElementById('det-stat').textContent = `${hist.length} monthly appearance${hist.length !== 1 ? 's' : ''}`;
+    document.getElementById('det-sub').textContent = 'Artist History';
+    
+    // UI Dorada para el Peak #1
+    document.getElementById('det-peak').innerHTML = `
+        <div class="peak-badge" style="color:${peak === 1 ? 'var(--gold)' : 'inherit'}">
+            Peak Position: #${peak}
+        </div>`;
+    
+    document.getElementById('det-stat').innerHTML = `
+        <span style="color:var(--gold); font-weight:bold">${hist.length}</span> 
+        monthly appearance${hist.length !== 1 ? 's' : ''}`;
 
     const lastPosEl = document.getElementById('det-last-pos');
     const lastDateEl = document.getElementById('det-last-date');
-
-    // --- LÓGICA DE STATUS MEJORADA ---
     const lastEntry = hist[hist.length - 1];
     const isStillInChart = lastEntry.period === lastGlobalMonth;
 
     if (isStillInChart) {
-        // Si el historial solo tiene 1 entrada, es un debut absoluto
-        if (hist.length === 1) {
-            lastPosEl.textContent = 'NEW';
-            lastPosEl.style.color = "var(--gold)";
-            lastDateEl.textContent = "Debut Month";
-        } else {
-            // Es un artista recurrente, mostramos su cambio actual
-            const currentChange = lastEntry.change || '=';
-            lastPosEl.textContent = currentChange;
-            lastDateEl.textContent = "Currently in Chart";
-            
-            // Colores según cambio
-            if (currentChange.includes('+')) lastPosEl.style.color = "var(--up)";
-            else if (currentChange.includes('-')) lastPosEl.style.color = "var(--down)";
-            else if (currentChange === 'RE') lastPosEl.style.color = "var(--gold)";
-            else lastPosEl.style.color = "var(--text)";
-        }
+        const currentChange = lastEntry.change || '=';
+        lastPosEl.textContent = currentChange;
+        lastDateEl.textContent = "Currently in Chart";
+        if (currentChange.includes('+')) lastPosEl.style.color = "var(--up)";
+        else if (currentChange.includes('-')) lastPosEl.style.color = "var(--down)";
+        else if (currentChange === 'RE' || currentChange === 'NEW') lastPosEl.style.color = "var(--gold)";
+        else lastPosEl.style.color = "var(--text)";
     } else {
-        // Está fuera del chart actual
         lastPosEl.textContent = 'OUT';
         lastPosEl.style.color = '#555';
         lastDateEl.textContent = `Last seen: ${lastEntry.period}`;
     }
 
-    // Dibujar gráfica
-    drawSpark(hist.map(h => h.rank));
+    // MANDAMOS TRUE PARA INDICAR QUE ES ARTISTA
+    drawSpark(hist, true); 
 
-    // Tabla de historial
     document.getElementById('det-rows').innerHTML = hist.map(h => `
       <tr>
-        <td>${h.period}</td>
-        <td><span class="rank-hl" style="color:${h.rank <= 3 ? 'var(--gold)' : 'var(--text)'}">#${h.rank}</span></td>
+        <td>${h.period} <span style="font-size:0.6rem; color:var(--gold)">(MO)</span></td>
+        <td><span class="rank-hl" style="color:${h.rank === 1 ? 'var(--gold)' : 'inherit'}">#${h.rank}</span></td>
         <td>${chgHtml(h.change)}</td>
-      </tr>`).join('') || '<tr><td colspan="3">No history found</td></tr>';
+      </tr>`).reverse().join('');
 
     document.getElementById('det-art').innerHTML = '<div class="history-cover-ph">★</div>';
-    
-    // IMPORTANTE: Aseguramos que se ejecute la vista
     showView('detail');
 }
 
     
     
-  function drawSpark(hist) {
+  function drawSpark(hist, isArtist = false) {
   const svg = document.getElementById('det-spark');
   if (!hist || hist.length === 0) { svg.innerHTML = ''; return; }
 
   const W = 800, H = 150, P_TOP = 40, P_BTM = 20, P_SIDE = 50;
   const rankValues = hist.map(h => h.rank);
-  const chartMax = Math.max(...rankValues, 20); 
+  
+  // Ajustamos el máximo del chart: 10 para artistas, 20 para canciones
+  const chartMax = isArtist ? 10 : Math.max(...rankValues, 20); 
   const rng = chartMax - 1;
-  const totalWeeks = window.LC.WK_DATES.length; 
 
-  const getX = (wIdx) => P_SIDE + (wIdx / (totalWeeks - 1)) * (W - 2 * P_SIDE);
+  const totalPeriods = isArtist ? window.LC.MO_KEYS.length : window.LC.WK_DATES.length; 
+
+  const getX = (idx) => P_SIDE + (idx / (totalPeriods - 1)) * (W - 2 * P_SIDE);
   const getY = (r) => P_TOP + ((r - 1) / rng) * (H - P_TOP - P_BTM);
 
-  // --- LÍNEAS GUÍA (Dorado en #1 y Estilo Original) ---
+  // --- LÍNEAS GUÍA PERSONALIZADAS ---
+  // Si es artista: 1, 3, 5, 10. Si es canción: 1, 5, 10, 20 + posición actual.
+  let guideRanks = isArtist ? [1, 3, 5, 10] : [1, 5, 10, 20];
   const currentRank = rankValues[rankValues.length - 1];
-  let guides = [...new Set([1, 5, 10, 20, currentRank])].sort((a,b) => a-b);
   
+  let guides = [...new Set([...guideRanks, currentRank])].sort((a,b) => a-b);
+  
+  // Filtrar guías que se salgan del rango (por si acaso)
+  guides = guides.filter(g => g <= chartMax);
+
   let guidesHtml = guides.map(pos => {
     const y = getY(pos);
-    const isMain = [1, 5, 10, 20].includes(pos);
     const isGold = pos === 1;
+    const isSolid = guideRanks.includes(pos); // Líneas principales son sólidas
     
     return `
       <line x1="${P_SIDE}" y1="${y}" x2="${W-P_SIDE}" y2="${y}" 
-            stroke="${isGold ? 'rgba(201, 168, 76, 0.5)' : 'rgba(255,255,255,0.05)'}" 
+            stroke="${isGold ? 'rgba(201, 168, 76, 0.4)' : 'rgba(255,255,255,0.05)'}" 
             stroke-width="${isGold ? '1.5' : '1'}" 
-            ${isMain ? '' : 'stroke-dasharray="4,4"'}/>
+            ${isSolid ? '' : 'stroke-dasharray="4,4"'}/>
       <text x="${W-P_SIDE + 5}" y="${y + 3}" 
             fill="${isGold ? 'var(--gold)' : '#444'}" 
-            font-size="9" font-weight="${isGold ? '700' : '400'}">#${pos}</text>
-    `;
+            font-size="9" font-weight="${isGold ? '700' : '400'}">#${pos}</text>`;
   }).join('');
 
-  // Lógica de Gaps (Segmentos)
+  // Segmentos para Gaps
   let segments = [];
   let currentSegment = [];
   hist.forEach((h, i) => {
@@ -352,7 +358,7 @@
     return `<polyline points="${pts}" fill="none" stroke="#C9A84C" stroke-width="2" opacity="0.4" stroke-linejoin="round"/>`;
   }).join('');
 
-  // --- PUNTOS (Dorado en #1) ---
+  // Nodos con Dorado en #1
   const nodesHtml = hist.map(h => {
     const isGold = h.rank === 1;
     return `
