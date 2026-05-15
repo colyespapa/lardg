@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Official Lardish Music Charts — Official Music Charts of the Lardish Republic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    <img src="flag.png" alt="The Flag of the Lardish Republic" height="50">
+    Lardish Charts
+    <div class="logo-divider"></div>
+    <span class="logo-sub">Official Music Charts</span>
+  </a>
+  <nav>
+    <a class="nav-link active" onclick="showView('charts')">Charts</a>
+    <a class="nav-link" onclick="showView('browse')">History</a>
+  </nav>
+</header>
+
+<div id="hero-block">
+  <div class="hero">
+    <div class="hero-eyebrow">Official Website of the Lardish Republic</div>
+    <h1>The <em>Lardish</em><br>Music Charts</h1>
+    <img src="logo.png" alt="Lardish Charts Logo" height="200">
+    <p class="hero-sub">Official Top Weekly and Monthly Songs &amp; Artists of the Lardish Republic</p>
+    <div class="tab-bar">
+      <button class="tab active" id="tab-weekly" onclick="switchPeriod('weekly')">Weekly</button>
+      <button class="tab" id="tab-monthly" onclick="switchPeriod('monthly')">Monthly</button>
+    </div>
+  </div>
+  <div class="week-nav">
+    <button id="btn-prev" onclick="navPeriod(-1)">‹</button>
+    <div class="week-label" id="period-label"><strong>—</strong><span> </span></div>
+    <button id="btn-next" onclick="navPeriod(1)">›</button>
+  </div>
+</div>
+
+<main>
+  <div class="view active" id="view-charts">
+    <div class="charts-grid">
+      <div>
+        <div class="col-header">
+          <div class="col-title">Top Songs</div>
+          <div class="col-meta" id="songs-lbl">Top 10</div>
+        </div>
+        <div id="songs-list"></div>
+      </div>
+      <div>
+        <div class="col-header">
+          <div class="col-title">Top Artists</div>
+          <div class="col-meta" id="artists-lbl">Top 10</div>
+        </div>
+        <div id="artists-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view" id="view-browse">
+    <div class="browse-section-title">Song History Index</div>
+    <div id="browse-songs"></div>
+    <div class="browse-section-title" style="margin-top:2.5rem">Artist History Index</div>
+    <div id="browse-artists"></div>
+  </div>
+
+  <div class="view" id="view-detail">
+  <div class="history-header">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <div>
+      <div class="detail-title" id="det-title"></div>
+      <div class="detail-sub" id="det-sub"></div>
+    </div>
+  </div>
+
+  <div class="detail-content-wrapper">
+    <div class="detail-top-layout">
+      <div id="det-art"></div>
+      
+      <div class="detail-stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Peak Position</span>
+          <div id="det-peak"></div> </div>
+        <div class="stat-item">
+          <span class="stat-label">Chart Presence</span>
+          <div id="det-stat" class="stat-value"></div>
+        </div>
+          <div class="stat-item">
+    <span class="stat-label">Currently / Status</span>
+    <div id="det-last-pos" class="stat-value">—</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Last Appearance</span>
+    <div id="det-last-date" class="stat-value">—</div>
+  </div>
+      </div>
+    </div>
+    
+    <div class="detail-chart-container">
+      <svg id="det-spark" class="spark-svg" preserveAspectRatio="none"></svg>
+    </div>
+  </div>
+
+  <table class="history-table">
+    <thead><tr><th>Period</th><th>Position</th><th>Change</th></tr></thead>
+    <tbody id="det-rows"></tbody>
+  </table>
+</div>
+</main>
+
+<footer><p>Copyright © 2026 Lardish Charts. All rights reserved.</p>
+  <p><a href="methodology.html">How we calculate the charts</a></p>
+  <strong>Lardish Charts</strong> — Official Music Charts of the Lardish Republic</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+    <script>
+        // Force initial state to weekly
+        window.addEventListener('DOMContentLoaded', () => {
+            switchPeriod('weekly');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Official Lardish Music Charts — Official Music Charts of the Lardish Republic</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 12mm;
+            background-color: #0d0d0d;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0ede6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #0d0d0d;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        
+        .container {
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid #c9a84c;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #c9a84c;
+            font-size: 24pt;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-size: 11pt;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #c9a84c;
+            border-left: 5px solid #c9a84c;
+            padding-left: 15px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 16pt;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            color: #f0ede6;
+            font-size: 13pt;
+            margin-top: 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 10.5pt;
+            color: #cccccc;
+            text-align: justify;
+        }
+
+        .info-box {
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #111111;
+            font-size: 10pt;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #222;
+        }
+        
+        th {
+            background-color: #1a1a1a;
+            color: #c9a84c;
+            text-transform: uppercase;
+            font-size: 9pt;
+            letter-spacing: 1px;
+        }
+        
+        .highlight {
+            color: #c9a84c;
+            font-weight: bold;
+        }
+    </style>
+<script type="text/javascript" nonce="c2f00d71773f48188feed293f4c" src="//local.adguard.org?ts=1778103693583&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgxiYXJkX3N0b3JhZ2USTBIJdGVtcF9kYXRhGj8KMDA3OTE3YWEzYTBiNzNhOGEwMDA2NTE5MzM4NjBjNzViMDU2YWI5ZWVhYTAwODQ2NxILEgcQhZvT_JQKGAE%26filename%3Dlardish_charts_methodology_en.html%26opi%3D103135050&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="c2f00d71773f48188feed293f4c" src="//local.adguard.org?ts=1778103693583&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+
+<header>
+  <a class="logo" href="index.html">
+    <img src="flag.png" alt="The Flag of the Lardish Republic" height="50">
+    Lardish Charts
+    <div class="logo-divider"></div>
+    <span class="logo-sub">Official Music Charts</span>
+  </a>
+</header>
+    <div class="container">
+        <div class="header">
+            <h1>Methodology Guide</h1>
+            <div class="subtitle">Lardish Charts - Data-Driven Music Curation</div>
+        </div>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                Lardish Charts operates on a "Deep Data" model. To ensure the highest accuracy in tracking trends, peaks, and re-entries, the system monitors a significantly larger pool of data than what is displayed on the public interface. This document outlines the internal mechanics of our weekly and monthly rankings.
+            </p>
+        </section>
+
+        <section>
+            <h2>1. Weekly Chart Dynamics</h2>
+            <div class="info-box">
+                <h3>The "Top 100" Backend</h3>
+                <p>
+                    While the website displays a streamlined <span class="highlight">Top 20</span>, the internal database tracks the full <span class="highlight">Top 100</span> positions.
+                </p>
+                <ul>
+                    <li><strong>Invisible Tracking:</strong> Any song ranking between #21 and #100 is fully logged. This allows the system to differentiate between a brand-new entry and a song that has been climbing through the lower tiers.</li>
+                    <li><strong>Status Accuracy:</strong> If a song moves from #25 to #15, the system correctly identifies it as a "climber" rather than a "NEW" entry.</li>
+                    <li><strong>Historical Persistence:</strong> We maintain the "Peak Position" across the entire Top 100, ensuring that a song's true highest point is never lost, even if it occurred outside the visible Top 20.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Monthly Chart Consolidation</h2>
+            <div class="info-box">
+                <h3>Artist & Song Aggregation</h3>
+                <p>
+                    Monthly charts are designed to highlight the most consistent performers. To achieve this, we process the <span class="highlight">Top 25</span> entries to generate a curated <span class="highlight">Top 10</span> showcase.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Data Processed (Internal)</th>
+                            <th>Data Displayed (Public)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Weekly Songs</td>
+                            <td>Top 100</td>
+                            <td>Top 20</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Songs</td>
+                            <td>Top 25</td>
+                            <td>Top 10</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Artists</td>
+                            <td>Top 25</td>
+                            <td>Top 10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    By monitoring 25 artists but only showing 10, the "Change" indicator remains mathematically sound. If an artist drops to #14, they disappear from the view but remain "active" in the system, allowing for accurate "RE-ENTRY" or "OUT" status detection in subsequent months.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Status Indicators & Logic</h2>
+            <ul>
+                <li><span class="highlight">NEW:</span> The very first time a title/artist enters the internal tracking system (Top 100 for weeks / Top 25 for months).</li>
+                <li><span class="highlight">RE-ENTRY:</span> A return to the chart after falling completely out of the internal tracking range in previous updates.</li>
+                <li><span class="highlight">OUT:</span> Automatic status assigned when a title is no longer present in the most recent update's internal tracking range.</li>
+                <li><span class="highlight">PEAK:</span> The absolute highest rank achieved since the song's debut in the system.</li>
+            </ul>
+        </section>
+
+        <footer>Copyright © 2026 Lardish Charts. All rights reserved.
+  <strong>Lardish Charts</strong> — Official Music Charts of the Lardish Republic</footer>
+    </div>
+</body>
+</html>
