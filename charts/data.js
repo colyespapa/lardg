@@ -6,7 +6,7 @@ LC.WK_DATES = [
   "01/25–01/31","02/01–02/07","02/08–02/14","02/15–02/21",
   "02/22–02/28","03/01–03/07","03/08–03/14","03/15–03/21",
   "03/22–03/28","03/29–04/04","04/05–04/11","04/12–04/18",
-  "04/19–04/25","04/26–05/02", "05/03-05/09"
+  "04/19–04/25","04/26–05/02", "05/03-05/09", "05/10-05/16"
 ];
 
 // Weekly song chart history — 18 weeks, top 5 each
@@ -390,9 +390,30 @@ LC.WK_SONGS = [
 {rank:17, title:"Part Of Me", artist:"Katy Perry", change:"NEW"},
 {rank:18, title:"bandaids", artist:"Katy Perry", change:"-3"},
 {rank:19, title:"Don't Blame Me", artist:"Taylor Swift", change:"+39"},
-{rank:20, title:"Is It Over Now? (Taylor's Version) (From The Vault)", artist:"Taylor Swift", change:"+49"},
-        
-    ]
+{rank:20, title:"Is It Over Now? (Taylor's Version) (From The Vault)", artist:"Taylor Swift", change:"+49"},   
+    ],
+    [
+      {rank:1, title:"Legendary Lovers", artist:"Katy Perry", change:"+1"},
+{rank:2, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"+2"},
+{rank:3, title:"bandaids", artist:"Katy Perry", change:"+15"},
+{rank:4, title:"Vodka Cranberry", artist:"Conan Gray", change:"+42"},
+{rank:5, title:"Thinking of You", artist:"Katy Perry", change:"+25"},
+{rank:6, title:"Part Of Me", artist:"Katy Perry", change:"+11"},
+{rank:7, title:"Opalite", artist:"Taylor Swift", change:"+26"},
+{rank:8, title:"Hard Feelings /Loveless", artist:"Lorde", change:"NEW"},
+{rank:9, title:"Bangaranga", artist:"DARA", change:"NEW"},
+{rank:10, title:"The One That Got Away", artist:"Katy Perry", change:"-10"},
+{rank:11, title:"California Gurls (feat. Snoop Dogg)", artist:"Katy Perry", change:"RE"},
+{rank:12, title:"Wide Awake", artist:"Katy Perry", change:"+26"},
+{rank:13, title:"Bad Blood (Taylor's Version) [feat. Kendrick Lamar]", artist:"Taylor Swift", change:"+1"},
+{rank:14, title:"Sanity", artist:"Louis Tomlinson", change:"NEW"},
+{rank:15, title:"Green Light", artist:"Lorde", change:"NEW"},
+{rank:16, title:"The Louvre", artist:"Lorde", change:"NEW"},
+{rank:17, title:"Ruin The Friendship", artist:"Taylor Swift", change:"+4"},
+{rank:18, title:"Dark Horse (feat. Juicy J)", artist:"Katy Perry", change:"+75"},
+{rank:19, title:"I Did Something Bad", artist:"Taylor Swift", change:"-16"},
+{rank:20, title:"Hello", artist:"Adele", change:"+8"},
+    ],
 ];
 
 LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026"];
