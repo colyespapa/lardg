@@ -306,29 +306,42 @@
   const W = 800, H = 150, P_TOP = 40, P_BTM = 20, P_SIDE = 50;
   const rankValues = hist.map(h => h.rank);
   
-  // Ajustamos el máximo del chart: 10 para artistas, 20 para canciones
-  const chartMax = isArtist ? 10 : Math.max(...rankValues, 20); 
+  // 1. DETERMINAR EL MÁXIMO DINÁMICO DEL CHART
+  let chartMax = 25; // Por defecto para tu nuevo Top 25 Semanal
+  if (isArtist) {
+    chartMax = 10;   // Para artistas (solo Top 10)
+  } else {
+    // Si la canción tiene registros mensuales (isMonth) o algún rank supera 25, se expande a 50
+    const hasMonthlyData = hist.some(h => h.isMonth);
+    if (hasMonthlyData || Math.max(...rankValues) > 25) {
+      chartMax = 50;
+    }
+  }
+  
   const rng = chartMax - 1;
-
   const totalPeriods = isArtist ? window.LC.MO_KEYS.length : window.LC.WK_DATES.length; 
 
   const getX = (idx) => P_SIDE + (idx / (totalPeriods - 1)) * (W - 2 * P_SIDE);
   const getY = (r) => P_TOP + ((r - 1) / rng) * (H - P_TOP - P_BTM);
 
-  // --- LÍNEAS GUÍA PERSONALIZADAS ---
-  // Si es artista: 1, 3, 5, 10. Si es canción: 1, 5, 10, 20 + posición actual.
-  let guideRanks = isArtist ? [1, 3, 5, 10] : [1, 5, 10, 20];
+  // 2. CONFIGURAR LÍNEAS GUÍA SEGÚN EL RANGO (Añadidos #15 y #20)
+  let guideRanks = [1, 5, 10, 15, 20, 25]; // Estándar completo para tu Top 25 Semanal
+  if (isArtist) {
+    guideRanks = [1, 3, 5, 10];    // Estándar para Artistas
+  } else if (chartMax === 50) {
+    guideRanks = [1, 10, 25, 50];  // Estándar adaptado para el Top 50 Mensual
+  }
+
   const currentRank = rankValues[rankValues.length - 1];
-  
   let guides = [...new Set([...guideRanks, currentRank])].sort((a,b) => a-b);
   
-  // Filtrar guías que se salgan del rango (por si acaso)
+  // Filtrar guías que se salgan del rango por seguridad
   guides = guides.filter(g => g <= chartMax);
 
   let guidesHtml = guides.map(pos => {
     const y = getY(pos);
     const isGold = pos === 1;
-    const isSolid = guideRanks.includes(pos); // Líneas principales son sólidas
+    const isSolid = guideRanks.includes(pos); // Las líneas principales son sólidas, las extras son discontinuas
     
     return `
       <line x1="${P_SIDE}" y1="${y}" x2="${W-P_SIDE}" y2="${y}" 
@@ -340,7 +353,7 @@
             font-size="9" font-weight="${isGold ? '700' : '400'}">#${pos}</text>`;
   }).join('');
 
-  // Segmentos para Gaps
+  // 3. SEGMENTOS PARA GAPS (HUECOS INTACTOS)
   let segments = [];
   let currentSegment = [];
   hist.forEach((h, i) => {
@@ -358,7 +371,7 @@
     return `<polyline points="${pts}" fill="none" stroke="#C9A84C" stroke-width="2" opacity="0.4" stroke-linejoin="round"/>`;
   }).join('');
 
-  // Nodos con Dorado en #1
+  // 4. NODOS CON DETALLES EN DORADO PARA EL #1
   const nodesHtml = hist.map(h => {
     const isGold = h.rank === 1;
     return `
