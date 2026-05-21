@@ -510,7 +510,7 @@ LC.WK_SONGS = [
 {rank:22, title:"Style (Taylor's Version)", artist:"Taylor Swift", change:"RE"},
 {rank:23, title:"Last Friday Night (T.G.I.F.)", artist:"Katy Perry", change:"NEW"},
 {rank:24, title:"Power", artist:"Katy Perry", change:"-16"},
-{rank:25, title:"I Knew You Were Trouble (Taylor's Version)", artist:"Taylor Swift", change:"NEW"},],
+{rank:25, title:"I Knew You Were Trouble (Taylor's Version)", artist:"Taylor Swift", change:"RE"},],
 ];
 
 LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026"];
