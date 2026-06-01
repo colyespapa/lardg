@@ -566,7 +566,7 @@ LC.WK_SONGS = [
 {rank:25, title:"Elizabeth Taylor", artist:"Taylor Swift", change:"RE"},],
 ];
 
-LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026"];
+LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"];
 
 LC.MO_SONGS = {
   "Jan 2026":[
@@ -595,27 +595,39 @@ LC.MO_SONGS = {
   ],
   "Mar 2026":[
     {rank:1, title:"Birthday", artist:"Katy Perry", change:"NEW"},
-{rank:2, title:"LIFETIMES", artist:"Katy Perry", change:"NEW"},
-{rank:3, title:"ALL THE LOVE", artist:"Katy Perry", change:"NEW"},
-{rank:4, title:"Aperture", artist:"Harry Styles", change:"+20"},
-{rank:5, title:"Wildest Dreams (Taylor's Version)", artist:"Taylor Swift", change:"+7"},
-{rank:6, title:"Style (Taylor's Version)", artist:"Taylor Swift", change:"-2"},
+{rank:2, title:"ALL THE LOVE", artist:"Katy Perry", change:"NEW"},
+{rank:3, title:"LIFETIMES", artist:"Katy Perry", change:"NEW"},
+{rank:4, title:"Aperture", artist:"Harry Styles", change:"+19"},
+{rank:5, title:"Hello", artist:"Adele", change:"="},
+{rank:6, title:"Wildest Dreams (Taylor's Version)", artist:"Taylor Swift", change:"+9"},
 {rank:7, title:"Cool for the Summer", artist:"Demi Lovato", change:"-6"},
 {rank:8, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"-2"},
-{rank:9, title:"Hello", artist:"Adele", change:"-4"},
-{rank:10, title:"Welcome To New York (Taylor's Version)", artist:"Taylor Swift", change:"+4"},
+{rank:9, title:"Welcome To New York (Taylor's Version)", artist:"Taylor Swift", change:"+4"},
+{rank:10, title:"Style (Taylor's Version)", artist:"Taylor Swift", change:"-6"},
   ],
   "Apr 2026":[
-    {rank:1, title:"Style (Taylor's Version)", artist:"Taylor Swift", change:"+5"},
-{rank:2, title:"Cool for the Summer", artist:"Demi Lovato", change:"+5"},
-{rank:3, title:"bandaids", artist:"Katy Perry", change:"+11"},
-{rank:4, title:"Sunflowers", artist:"Louis Tomlinson", change:"+11"},
-{rank:5, title:"Wildest Dreams (Taylor's Version)", artist:"Taylor Swift", change:"="},
-{rank:6, title:"Confident", artist:"Demi Lovato", change:"+6"},
-{rank:7, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"+1"},
-{rank:8, title:"Welcome To New York (Taylor's Version)", artist:"Taylor Swift", change:"+2"},
-{rank:9, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"+4"},
-{rank:10, title:"Shake It Off (Taylor's Version)", artist:"Taylor Swift", change:"+10"},
+    {rank:1, title:"bandaids", artist:"Katy Perry", change:"+15"},
+{rank:2, title:"Style (Taylor's Version)", artist:"Taylor Swift", change:"+8"},
+{rank:3, title:"Cool for the Summer", artist:"Demi Lovato", change:"+4"},
+{rank:4, title:"Sunflowers", artist:"Louis Tomlinson", change:"+10"},
+{rank:5, title:"Shake It Off (Taylor's Version)", artist:"Taylor Swift", change:"+15"},
+{rank:6, title:"Confident", artist:"Demi Lovato", change:"+5"},
+{rank:7, title:"Wildest Dreams (Taylor's Version)", artist:"Taylor Swift", change:"-1"},
+{rank:8, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"="},
+{rank:9, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"+3"},
+{rank:10, title:"Welcome To New York (Taylor's Version)", artist:"Taylor Swift", change:"-1"},
+  ],
+  "May 2026":[
+    {rank:1, title:"Legendary Lovers", artist:"Katy Perry", change:"+13"},
+{rank:2, title:"The One That Got Away", artist:"Katy Perry", change:"NEW"},
+{rank:3, title:"Thinking Of You", artist:"Katy Perry", change:"+14"},
+{rank:4, title:"Bad Blood (Taylor's Version) [feat. Kendrick Lamar]", artist:"Taylor Swift", change:"+11"},
+{rank:5, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"+3"},
+{rank:6, title:"bandaids", artist:"Katy Perry", change:"-5"},
+{rank:7, title:"Bangaranga", artist:"DARA", change:"NEW"},
+{rank:8, title:"Legendary Lovers (Save Me)", artist:"Katy Perry & Chief Keef", change:"NEW"},
+{rank:9, title:"CANCELLED!", artist:"Taylor Swift", change:"NEW"},
+{rank:10, title:"I Did Something Bad", artist:"Taylor Swift", change:"NEW"},
   ]
 };
 
@@ -647,13 +659,13 @@ LC.MO_ARTISTS = {
   "Mar 2026":[
     {rank:1, name:"Katy Perry", genre:"Pop", change:"="},
 {rank:2, name:"Taylor Swift", genre:"Pop", change:"+2"},
-{rank:3, name:"Harry Styles", genre:"Pop", change:"+6"},
+{rank:3, name:"Harry Styles", genre:"Pop", change:"+5"},
 {rank:4, name:"Adele", genre:"Soft pop", change:"-2"},
 {rank:5, name:"Demi Lovato", genre:"Pop", change:"-2"},
 {rank:6, name:"Louis Tomlinson", genre:"Pop", change:"-1"},
-{rank:7, name:"Ariana Grande", genre:"Pop", change:"+4"},
-{rank:8, name:"Justin Bieber", genre:"Pop", change:"+6"},
-{rank:9, name:"Ellie Goulding", genre:"Pop", change:"-3"},
+{rank:7, name:"Ariana Grande", genre:"Pop", change:"+5"},
+{rank:8, name:"Ellie Goulding", genre:"Pop", change:"-2"},
+{rank:9, name:"Justin Bieber", genre:"Pop", change:"+5"},
 {rank:10, name:"Miley Cyrus", genre:"Pop", change:"-3"},
   ],
   "Apr 2026":[
@@ -663,9 +675,20 @@ LC.MO_ARTISTS = {
 {rank:4, name:"Louis Tomlinson", genre:"Pop", change:"+2"},
 {rank:5, name:"Adele", genre:"Soft pop", change:"-1"},
 {rank:6, name:"One Direction", genre:"Pop", change:"+8"},
-{rank:7, name:"Ariana Grande", genre:"Pop", change:"="},
-{rank:8, name:"Conan Gray", genre:"Pop", change:"NEW"},
-{rank:9, name:"Ellie Goulding", genre:"Pop", change:"="},
+{rank:7, name:"Conan Gray", genre:"Pop", change:"NEW"},
+{rank:8, name:"Ariana Grande", genre:"Pop", change:"-1"},
+{rank:9, name:"Ellie Goulding", genre:"Pop", change:"-1"},
 {rank:10, name:"Harry Styles", genre:"Pop", change:"-7"},
+  ],
+  "May 2026":[{rank:1, name:"Taylor Swift", genre:"Pop", change:"="},
+{rank:2, name:"Katy Perry", genre:"Pop", change:"="},
+{rank:3, name:"Adele", genre:"Soft pop", change:"+2"},
+{rank:4, name:"Louis Tomlinson", genre:"Pop", change:"="},
+{rank:5, name:"Ariana Grande", genre:"Pop", change:"+3"},
+{rank:6, name:"Lorde", genre:"Alternative", change:"NEW"},
+{rank:7, name:"Conan Gray", genre:"Pop", change:"="},
+{rank:8, name:"Beyoncé", genre:"Pop", change:"+4"},
+{rank:9, name:"Demi Lovato", genre:"Pop", change:"-6"},
+{rank:10, name:"Kyle Alessandro", genre:"Pop", change:"NEW"},
   ]
 };
