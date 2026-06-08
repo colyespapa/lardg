@@ -7,7 +7,7 @@ LC.WK_DATES = [
   "02/22–02/28","03/01–03/07","03/08–03/14","03/15–03/21",
   "03/22–03/28","03/29–04/04","04/05–04/11","04/12–04/18",
   "04/19–04/25","04/26–05/02", "05/03-05/09", "05/10-05/16",
-  "05/17-05/23","05/24-05/30"
+  "05/17-05/23","05/24-05/30", "05/31-05/06"
 ];
 
 // Weekly song chart history — 18 weeks, top 5 each
@@ -564,6 +564,31 @@ LC.WK_SONGS = [
 {rank:23, title:"Lover", artist:"Taylor Swift", change:"RE"},
 {rank:24, title:"yes, and?", artist:"Ariana Grande", change:"NEW"},
 {rank:25, title:"Elizabeth Taylor", artist:"Taylor Swift", change:"RE"},],
+[{rank:1, title:"Cool for the Summer", artist:"Demi Lovato", change:"RE"},
+{rank:2, title:"hate that i made you love me", artist:"Ariana Grande", change:"+9"},
+{rank:3, title:"bandaids", artist:"Katy Perry", change:"RE"},
+{rank:4, title:"Bangaranga", artist:"DARA", change:"-1"},
+{rank:5, title:"yes, and?", artist:"Ariana Grande", change:"+19"},
+{rank:6, title:"Firework", artist:"Katy Perry", change:"RE"},
+{rank:7, title:"Roar", artist:"Katy Perry", change:"+6"},
+{rank:8, title:"I Kissed A Girl", artist:"Katy Perry", change:"NEW"},
+{rank:9, title:"Unconditionally", artist:"Katy Perry", change:"-5"},
+{rank:10, title:"Never Really Over", artist:"Katy Perry", change:"RE"},
+{rank:11, title:"exile (feat. Bon Iver)", artist:"Taylor Swift", change:"-5"},
+{rank:12, title:"Into You", artist:"Ariana Grande", change:"RE"},
+{rank:13, title:"Chained To The Rhythm (feat. Skip Marley)", artist:"Katy Perry", change:"RE"},
+{rank:14, title:"Legendary Lovers", artist:"Katy Perry", change:"-13"},
+{rank:15, title:"Confident", artist:"Demi Lovato", change:"RE"},
+{rank:16, title:"Blank Space (Taylor's Version)", artist:"Taylor Swift", change:"-6"},
+{rank:17, title:"We Can't Stop", artist:"Miley Cyrus", change:"RE"},
+{rank:18, title:"Side To Side (feat. Nicki Minaj)", artist:"Ariana Grande", change:"RE"},
+{rank:19, title:"I Feel So Free", artist:"Madonna", change:"NEW"},
+{rank:20, title:"the 1", artist:"Taylor Swift", change:"-2"},
+{rank:21, title:"Low Rise Jeans", artist:"Demi Lovato", change:"RE"},
+{rank:22, title:"SloMo (Eurovision's Dancebreak Edit)", artist:"Chanel", change:"NEW"},
+{rank:23, title:"Legendary Lovers (Save Me)", artist:"Katy Perry & Chief Keef", change:"-21"},
+{rank:24, title:"Teenage Dream", artist:"Katy Perry", change:"-19"},
+{rank:25, title:"Ur So Gay", artist:"Katy Perry", change:"NEW"},],
 ];
 
 LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"];
