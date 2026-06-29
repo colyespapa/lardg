@@ -7,8 +7,8 @@ LC.WK_DATES = [
   "02/22–02/28","03/01–03/07","03/08–03/14","03/15–03/21",
   "03/22–03/28","03/29–04/04","04/05–04/11","04/12–04/18",
   "04/19–04/25","04/26–05/02", "05/03-05/09", "05/10-05/16",
-  "05/17-05/23","05/24-05/30", "05/31-05/06", "06/07-05/13",
-  "06/14-06/20"
+  "05/17-05/23","05/24-05/30", "05/31-05/06", "06/07-06/13",
+  "06/14-06/20", "06/21-06/27"
 ];
 
 // Weekly song chart history — 18 weeks, top 5 each
@@ -640,6 +640,31 @@ LC.WK_SONGS = [
 {rank:23, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"-12"},
 {rank:24, title:"Bad Blood (Taylor's Version) [feat. Kendrick Lamar]", artist:"Taylor Swift", change:"-17"},
 {rank:25, title:"I'M HIS, HE'S MINE (feat. Doechii)", artist:"Katy Perry", change:"RE"},],
+[{rank:1, title:"Watch It Burn", artist:"Katy Perry", change:"NEW"},
+{rank:2, title:"bandaids", artist:"Katy Perry", change:"+2"},
+{rank:3, title:"Delicate", artist:"Taylor Swift", change:"+3"},
+{rank:4, title:"Cool for the Summer", artist:"Demi Lovato", change:"-3"},
+{rank:5, title:"Dancing on the ice", artist:"Essyla", change:"NEW"},
+{rank:6, title:"Wildfire", artist:"Demi Lovato", change:"RE"},
+{rank:7, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"+16"},
+{rank:8, title:"Stone Cold", artist:"Demi Lovato", change:"+3"},
+{rank:9, title:"Look What You Made Me Do", artist:"Taylor Swift", change:"RE"},
+{rank:10, title:"Confident", artist:"Demi Lovato", change:"+3"},
+{rank:11, title:"Bad Blood (Taylor's Version) [feat. Kendrick Lamar]", artist:"Taylor Swift", change:"+13"},
+{rank:12, title:"I'M HIS, HE'S MINE (feat. Doechii)", artist:"Katy Perry", change:"+13"},
+{rank:13, title:"Ruin The Friendship", artist:"Taylor Swift", change:"-6"},
+{rank:14, title:"Bangaranga", artist:"DARA", change:"="},
+{rank:15, title:"LIFETIMES", artist:"Katy Perry", change:"RE"},
+{rank:16, title:"Skyfall", artist:"Adele", change:"NEW"},
+{rank:17, title:"Firework", artist:"Katy Perry", change:"-8"},
+{rank:18, title:"Teenage Dream", artist:"Katy Perry", change:"RE"},
+{rank:19, title:"Into Me You See", artist:"Katy Perry", change:"NEW"},
+{rank:20, title:"hate that i made you love me", artist:"Ariana Grande", change:"-17"},
+{rank:21, title:"ALL THE LOVE", artist:"Katy Perry", change:"RE"},
+{rank:22, title:"WOMAN'S WORLD", artist:"Katy Perry", change:"RE"},
+{rank:23, title:"Not Like The Movies", artist:"Katy Perry", change:"RE"},
+{rank:24, title:"Chained To The Rhythm (feat. Skip Marley)", artist:"Katy Perry", change:"RE"},
+{rank:25, title:"Father", artist:"Demi Lovato", change:"NEW"},],
 ];
 
 LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"];
