@@ -667,7 +667,7 @@ LC.WK_SONGS = [
 {rank:25, title:"Father", artist:"Demi Lovato", change:"NEW"},],
 ];
 
-LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"];
+LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","June 2026"];
 
 LC.MO_SONGS = {
   "Jan 2026":[
@@ -729,6 +729,18 @@ LC.MO_SONGS = {
 {rank:8, title:"Legendary Lovers (Save Me)", artist:"Katy Perry & Chief Keef", change:"NEW"},
 {rank:9, title:"CANCELLED!", artist:"Taylor Swift", change:"NEW"},
 {rank:10, title:"I Did Something Bad", artist:"Taylor Swift", change:"NEW"},
+  ],
+  "June 2026":[
+    {rank:1, title:"bandaids", artist:"Katy Perry", change:"+5"},
+{rank:2, title:"Watch It Burn", artist:"Katy Perry", change:"NEW"},
+{rank:3, title:"Legendary Lovers", artist:"Katy Perry", change:"-2"},
+{rank:4, title:"Cool for the Summer", artist:"Demi Lovato", change:"RE"},
+{rank:5, title:"Delicate", artist:"Taylor Swift", change:"NEW"},
+{rank:6, title:"hate that i made you love me", artist:"Ariana Grande", change:"NEW"},
+{rank:7, title:"Legendary Lovers (Save Me)", artist:"Katy Perry & Chief Keef", change:"+1"},
+{rank:8, title:"Bangaranga", artist:"DARA", change:"-1"},
+{rank:9, title:"Firework", artist:"Katy Perry", change:"RE"},
+{rank:10, title:"Confident", artist:"Katy Perry", change:"RE"},
   ]
 };
 
@@ -791,5 +803,17 @@ LC.MO_ARTISTS = {
 {rank:8, name:"Beyoncé", genre:"Pop", change:"+4"},
 {rank:9, name:"Demi Lovato", genre:"Pop", change:"-6"},
 {rank:10, name:"Kyle Alessandro", genre:"Pop", change:"NEW"},
+  ],
+  "June 2026":[
+    {rank:1, name:"Katy Perry", genre:"Pop", change:"+1"},
+{rank:2, name:"Taylor Swift", genre:"Pop", change:"-1"},
+{rank:3, name:"Demi Lovato", genre:"Pop", change:"+6"},
+{rank:4, name:"Ariana Grande", genre:"Pop", change:"+1"},
+{rank:5, name:"Louis Tomlinson", genre:"Pop", change:"-1"},
+{rank:6, name:"Harry Styles", genre:"Pop", change:"+5"},
+{rank:7, name:"Conan Gray", genre:"Pop", change:"="},
+{rank:8, name:"Adele", genre:"Soft pop", change:"-5"},
+{rank:9, name:"Lorde", genre:"Alternative", change:"-3"},
+{rank:10, name:"Dua Lipa", genre:"Pop", change:"+10"},
   ]
 };
