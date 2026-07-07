@@ -8,7 +8,7 @@ LC.WK_DATES = [
   "03/22–03/28","03/29–04/04","04/05–04/11","04/12–04/18",
   "04/19–04/25","04/26–05/02", "05/03-05/09", "05/10-05/16",
   "05/17-05/23","05/24-05/30", "05/31-05/06", "06/07-06/13",
-  "06/14-06/20", "06/21-06/27"
+  "06/14-06/20", "06/21-06/27", "06/28-07/04"
 ];
 
 // Weekly song chart history — 18 weeks, top 5 each
@@ -665,9 +665,34 @@ LC.WK_SONGS = [
 {rank:23, title:"Not Like The Movies", artist:"Katy Perry", change:"RE"},
 {rank:24, title:"Chained To The Rhythm (feat. Skip Marley)", artist:"Katy Perry", change:"RE"},
 {rank:25, title:"Father", artist:"Demi Lovato", change:"NEW"},],
+[{rank:1, title:"Watch It Burn", artist:"Katy Perry", change:"="},
+{rank:2, title:"bandaids", artist:"Katy Perry", change:"="},
+{rank:3, title:"Delicate", artist:"Taylor Swift", change:"="},
+{rank:4, title:"Look What You Made Me Do", artist:"Taylor Swift", change:"+5"},
+{rank:5, title:"Witness", artist:"Katy Perry", change:"RE"},
+{rank:6, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"+1"},
+{rank:7, title:"Firework", artist:"Katy Perry", change:"+10"},
+{rank:8, title:"hate that i made you love me", artist:"Ariana Grande", change:"+12"},
+{rank:9, title:"Hey Hey Hey", artist:"Katy Perry", change:"RE"},
+{rank:10, title:"Cool for the Summer", artist:"Demi Lovato", change:"-6"},
+{rank:11, title:"Dancing on the ice", artist:"Essyla", change:"-6"},
+{rank:12, title:"Bangaranga", artist:"DARA", change:"+2"},
+{rank:13, title:"Teenage Dream", artist:"Katy Perry", change:"+5"},
+{rank:14, title:"ALL THE LOVE", artist:"Katy Perry", change:"+7"},
+{rank:15, title:"E.T.", artist:"Katy Perry", change:"NEW"},
+{rank:16, title:"Confident", artist:"Demi Lovato", change:"-6"},
+{rank:17, title:"Chained To The Rhythm (feat. Skip Marley)", artist:"Katy Perry", change:"+7"},
+{rank:18, title:"California Gurls (feat. Snoop Dogg)", artist:"Katy Perry", change:"RE"},
+{rank:19, title:"Bon Appétit (feat. Migos)", artist:"Katy Perry", change:"RE"},
+{rank:20, title:"Legendary Lovers", artist:"Katy Perry", change:"RE"},
+{rank:21, title:"Part Of Me", artist:"Katy Perry", change:"RE"},
+{rank:22, title:"the 1", artist:"Taylor Swift", change:"RE"},
+{rank:23, title:"Last Friday Night (T.G.I.F.)", artist:"Katy Perry", change:"RE"},
+{rank:24, title:"LIFETIMES", artist:"Katy Perry", change:"-9"},
+{rank:25, title:"Stone Cold", artist:"Demi Lovato", change:"-17"},],
 ];
 
-LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","June 2026"];
+LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026"];
 
 LC.MO_SONGS = {
   "Jan 2026":[
@@ -730,7 +755,7 @@ LC.MO_SONGS = {
 {rank:9, title:"CANCELLED!", artist:"Taylor Swift", change:"NEW"},
 {rank:10, title:"I Did Something Bad", artist:"Taylor Swift", change:"NEW"},
   ],
-  "June 2026":[
+  "Jun 2026":[
     {rank:1, title:"bandaids", artist:"Katy Perry", change:"+5"},
 {rank:2, title:"Watch It Burn", artist:"Katy Perry", change:"NEW"},
 {rank:3, title:"Legendary Lovers", artist:"Katy Perry", change:"-2"},
@@ -740,7 +765,7 @@ LC.MO_SONGS = {
 {rank:7, title:"Legendary Lovers (Save Me)", artist:"Katy Perry & Chief Keef", change:"+1"},
 {rank:8, title:"Bangaranga", artist:"DARA", change:"-1"},
 {rank:9, title:"Firework", artist:"Katy Perry", change:"RE"},
-{rank:10, title:"Confident", artist:"Katy Perry", change:"RE"},
+{rank:10, title:"Confident", artist:"Demi Lovato", change:"RE"},
   ]
 };
 
@@ -804,7 +829,7 @@ LC.MO_ARTISTS = {
 {rank:9, name:"Demi Lovato", genre:"Pop", change:"-6"},
 {rank:10, name:"Kyle Alessandro", genre:"Pop", change:"NEW"},
   ],
-  "June 2026":[
+  "Jun 2026":[
     {rank:1, name:"Katy Perry", genre:"Pop", change:"+1"},
 {rank:2, name:"Taylor Swift", genre:"Pop", change:"-1"},
 {rank:3, name:"Demi Lovato", genre:"Pop", change:"+6"},
