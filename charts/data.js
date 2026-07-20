@@ -8,7 +8,8 @@ LC.WK_DATES = [
   "03/22–03/28","03/29–04/04","04/05–04/11","04/12–04/18",
   "04/19–04/25","04/26–05/02", "05/03-05/09", "05/10-05/16",
   "05/17-05/23","05/24-05/30", "05/31-05/06", "06/07-06/13",
-  "06/14-06/20", "06/21-06/27", "06/28-07/04", "07/05-07/11"
+  "06/14-06/20", "06/21-06/27", "06/28-07/04", "07/05-07/11",
+  "07/12-07/18"
 ];
 
 // Weekly song chart history — 18 weeks, top 5 each
@@ -715,6 +716,31 @@ LC.WK_SONGS = [
 {rank:23, title:"Bad Blood (Taylor's Version) [feat. Kendrick Lamar]", artist:"Taylor Swift", change:"RE"},
 {rank:24, title:"hate that i made you love me", artist:"Ariana Grande", change:"-16"},
 {rank:25, title:"Matilda", artist:"Harry Styles", change:"NEW"},],
+[{rank:1, title:"Watch It Burn", artist:"Katy Perry", change:"="},
+{rank:2, title:"bandaids", artist:"Katy Perry", change:"+3"},
+{rank:3, title:"Swish Swish (feat. Nicki Minaj)", artist:"Katy Perry", change:"-1"},
+{rank:4, title:"hate that i made you love me", artist:"Ariana Grande", change:"+20"},
+{rank:5, title:"Grenade", artist:"Bruno Mars", change:"NEW"},
+{rank:6, title:"Look What You Made Me Do", artist:"Taylor Swift", change:"+3"},
+{rank:7, title:"Delicate", artist:"Taylor Swift", change:"="},
+{rank:8, title:"Dancing on the ice", artist:"Essyla", change:"+2"},
+{rank:9, title:"Without Me", artist:"Halsey", change:"NEW"},
+{rank:10, title:"Bon Appétit (feat. Migos)", artist:"Katy Perry", change:"+7"},
+{rank:11, title:"Into Me You See", artist:"Katy Perry", change:"RE"},
+{rank:12, title:"Power", artist:"Katy Perry", change:"+6"},
+{rank:13, title:"Hey Hey Hey", artist:"Katy Perry", change:"RE"},
+{rank:14, title:"Witness", artist:"Katy Perry", change:"-6"},
+{rank:15, title:"…Ready For It?", artist:"Taylor Swift", change:"+7"},
+{rank:16, title:"Chained To The Rhythm (feat. Skip Marley)", artist:"Katy Perry", change:"-3"},
+{rank:17, title:"betty", artist:"Taylor Swift", change:"NEW"},
+{rank:18, title:"Double Rainbow", artist:"Katy Perry", change:"NEW"},
+{rank:19, title:"ME! (feat. Brendon Urie of Panic! At The Disco)", artist:"Taylor Swift", change:"-8"},
+{rank:20, title:"Marry You", artist:"Bruno Mars", change:"NEW"},
+{rank:21, title:"Stone Cold", artist:"Demi Lovato", change:"-17"},
+{rank:22, title:"Just the Way You Are", artist:"Bruno Mars", change:"NEW"},
+{rank:23, title:"Dark Horse (feat. Juicy J)", artist:"Katy Perry", change:"-4"},
+{rank:24, title:"Cool for the Summer", artist:"Demi Lovato", change:"-21"},
+{rank:25, title:"invisible string", artist:"Taylor Swift", change:"NEW"},]
 ];
 
 LC.MO_KEYS = ["Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026"];
